@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Laboratório privado | PIX R$ 1,00</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f2f5f8; color: #162333; padding: 24px; }
+    main { width: min(100%, 470px); background: white; padding: clamp(24px, 5vw, 36px); border: 1px solid #e2e8f0; border-radius: 20px; box-shadow: 0 22px 55px rgba(18,38,63,.07); }
+    .eyebrow { display: inline-block; color: #075c47; background: #eaf7f1; font-size: 11px; font-weight: 800; letter-spacing: .1em; border-radius: 30px; padding: 9px 12px; }
+    h1 { font-size: 26px; line-height: 1.15; margin: 18px 0 8px; letter-spacing: -.035em; }
+    .muted { color: #586879; font-size: 14px; line-height: 1.6; }
+    .amount { margin: 18px 0 20px; font-size: 38px; font-weight: 800; letter-spacing: -.05em; }
+    .note { font-size: 13px; line-height: 1.6; padding: 14px; border: 1px solid #dce7ef; background: #f7fafc; border-radius: 12px; margin-bottom: 22px; }
+    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 7px; }
+    input, textarea { display: block; width: 100%; border: 1px solid #cad5e2; border-radius: 10px; padding: 13px 14px; font: inherit; font-size: 14px; background: white; color: #162333; }
+    input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 3px solid #65bea4; outline-offset: 2px; }
+    textarea { resize: vertical; min-height: 96px; overflow-wrap: anywhere; }
+    button { width: 100%; border-radius: 10px; border: 0; background: #087c60; color: #fff; padding: 14px; margin-top: 12px; font: inherit; font-size: 14px; font-weight: 750; cursor: pointer; }
+    button.secondary { background: #eaf4f1; color: #075c47; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+    section { margin-top: 24px; padding-top: 22px; border-top: 1px solid #e5eaf0; }
+    .merchant { font-size: 14px; margin: 0 0 7px; overflow-wrap: anywhere; }
+    .qr-wrap { display: grid; place-items: center; margin: 19px auto; min-height: 180px; }
+    #qr { width: min(100%, 240px); height: auto; image-rendering: auto; }
+    #message { font-size: 13px; line-height: 1.5; min-height: 20px; color: #075c47; margin: 16px 0 0; overflow-wrap: anywhere; }
+    .footer { color: #68788a; font-size: 12px; line-height: 1.5; margin-top: 20px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="eyebrow">AMBIENTE PRIVADO • PAGAMENTO REAL</span>
+    <h1>Laboratório de integração PIX</h1>
+    <p class="muted">Verifique a criação de uma cobrança real pela API da PushinPay.</p>
+    <p class="amount">R$ 1,00</p>
+
+    <div class="note">
+      <strong>Teste de integração independente.</strong> Este pagamento não é taxa federal,
+      serviço oficial do Governo, consulta MEI, nem condição para liberar crédito.
+      O recebedor será identificado abaixo antes de você pagar.
+    </div>
+
+    <label for="accessCode">Código privado de acesso</label>
+    <input id="accessCode" type="password" autocomplete="off" maxlength="256" placeholder="Informe seu código de acesso">
+    <button id="createButton" type="button">Criar cobrança PIX de R$ 1,00</button>
+
+    <section id="payment" hidden aria-labelledby="paymentTitle">
+      <h2 id="paymentTitle">Cobrança gerada</h2>
+      <p class="merchant"><strong>Recebedor informado:</strong> <span id="merchant">—</span></p>
+      <p class="muted">Confira o nome do recebedor e o valor no aplicativo do seu banco <strong>antes de confirmar</strong>.</p>
+      <div class="qr-wrap">
+        <img id="qr" alt="QR Code da cobrança PIX real de R$ 1,00" hidden>
+        <p id="qrFallback" class="muted" hidden>Imagem do QR Code indisponível. Use o código copia e cola abaixo.</p>
+      </div>
+      <label for="pixCode">Código PIX copia e cola</label>
+      <textarea id="pixCode" readonly></textarea>
+      <button id="copyButton" class="secondary" type="button">Copiar código PIX</button>
+      <button id="checkButton" type="button">Já paguei — verificar status</button>
+      <p class="muted">A PushinPay permite consultas de status em intervalos de pelo menos 60 segundos. Não atualize repetidamente.</p>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+    <p class="footer">A página não armazena senha no navegador nem gera cobrança até que você clique em “Criar cobrança”. Recomenda-se também proteger este deploy por autenticação na Vercel.</p>
+  </main>
+  <script>
+    'use strict';
+    const el = id => document.getElementById(id);
+    let transactionId = null;
+    let lastStatusCheck = 0;
+
+    async function callApi(action) {
+      const response = await fetch('/api/pix-lab', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        cache: 'no-store',
+        body: JSON.stringify({
+          action,
+          access_code: el('accessCode').value,
+          ...(action === 'status' ? { id: transactionId } : {})
+        })
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'O servidor não conseguiu concluir o pedido.');
+      return data;
+    }
+
+    el('createButton').addEventListener('click', async () => {
+      if (!el('accessCode').value) {
+        el('message').textContent = 'Informe o código privado antes de criar a cobrança.';
+        return;
+      }
+      el('createButton').disabled = true;
+      el('message').textContent = 'Criando cobrança junto à PushinPay…';
+      try {
+        const data = await callApi('create');
+        if (!data.id || !data.code || data.amount_cents !== 100) {
+          throw new Error('A API devolveu dados incompatíveis com o teste de R$ 1,00.');
+        }
+        transactionId = data.id;
+        el('merchant').textContent = data.merchant || 'Não identificado';
+        el('pixCode').value = data.code;
+        if (data.image) {
+          el('qr').src = data.image;
+          el('qr').hidden = false;
+          el('qrFallback').hidden = true;
+        } else {
+          el('qr').hidden = true;
+          el('qrFallback').hidden = false;
+        }
+        el('payment').hidden = false;
+        el('message').textContent = 'PIX criado. Confira os dados no seu banco antes de pagar.';
+      } catch (error) {
+        el('createButton').disabled = false;
+        el('message').textContent = error.message || 'Não foi possível gerar a cobrança.';
+      }
+    });
+
+    el('copyButton').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(el('pixCode').value);
+        el('message').textContent = 'Código PIX copiado.';
+      } catch {
+        el('pixCode').focus();
+        el('pixCode').select();
+        el('message').textContent = 'Selecione e copie o código manualmente.';
+      }
+    });
+
+    el('checkButton').addEventListener('click', async () => {
+      if (!transactionId) return;
+      const remaining = 60000 - (Date.now() - lastStatusCheck);
+      if (lastStatusCheck && remaining > 0) {
+        el('message').textContent = 'Aguarde mais ' + Math.ceil(remaining / 1000) + ' segundos para consultar novamente.';
+        return;
+      }
+      el('checkButton').disabled = true;
+      lastStatusCheck = Date.now();
+      el('message').textContent = 'Consultando a confirmação bancária…';
+      try {
+        const result = await callApi('status');
+        el('message').textContent = result.paid
+          ? 'Pagamento de R$ 1,00 confirmado pela PushinPay.'
+          : 'Ainda sem confirmação. Status atual: ' + (result.status || 'desconhecido') + '.';
+      } catch (error) {
+        el('message').textContent = error.message || 'Falha ao consultar pagamento.';
+      } finally {
+        el('checkButton').disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
