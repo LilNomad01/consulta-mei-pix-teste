@@ -6,6 +6,6 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --check api/cnpj.js && node --check api/pix.js"
+    "test": "node --check api/cnpj.js && node --check api/pix.js && node --test tests/*.test.js"
   }
 }
