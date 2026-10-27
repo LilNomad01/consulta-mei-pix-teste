@@ -1,38 +1,58 @@
-# Consulta MEI — teste de interface e PIX simulado
+# Consulta MEI + teste técnico privado de PIX (na mesma página)
 
-Projeto independente e **não governamental** para consultar dados públicos de CNPJ e validar um fluxo demonstrativo de interface.
+Este é um projeto independente, não governamental, que consulta informações cadastrais públicas de CNPJ. A consulta é gratuita e não verifica ou aprova créditos ou recebíveis.
 
-## Funcionamento
+## Separação obrigatória dos fluxos
 
-- Consulta de CNPJ: `api/cnpj.js` consulta dados cadastrais em provedores públicos.
-- O modal de consulta apresenta saldo de teste de **R$ 0,00**. Não representa crédito aprovado nem valores a receber.
-- O botão **Entendi** abre apenas uma interface PIX demonstrativa.
-- `POST /api/pix` retorna `simulation: true`, `payable: false` e `amount_cents: 0`.
-- O código de teste não é pagável: não gera cobrança, não conecta à PushinPay e não recebe dinheiro.
+- **Consulta MEI:** `index.html` e `api/cnpj.js` continuam gratuitos. O botão **Entendi** apenas fecha o aviso sobre saldo demonstrativo de R$ 0,00; não chama a API de pagamento.
+- **Teste técnico voluntário:** no final do **mesmo `index.html`**, existe a seção **Área técnica: integração PIX**, com botão independente **Abrir teste de PIX (R$ 1,00)**.
+- A cobrança é criada somente se o operador informar o código privado, aceitar que a transferência é real e clicar expressamente em **Gerar cobrança PIX real de R$ 1,00**.
+- A tela informa o recebedor antes da criação do PIX. Ao pagar, confira o recebedor novamente no banco.
+- Esse pagamento **não compra um serviço**, **não é taxa oficial**, **não concede crédito** e **não é necessário para fazer consultas**. É apenas uma transferência voluntária de teste.
+- O processamento é realizado pela PushinPay; o recebedor é o titular da conta configurada.
 
-## Deploy na Vercel
+Não associe a cobrança a aprovação de crédito, consulta CNPJ ou benefício governamental.
 
-O projeto usa HTML/CSS/JavaScript e funções Node.js em `api/`.
+## Configuração da integração
+
+Configure as variáveis secretas na Vercel, em **Project Settings → Environment Variables**:
+
+```env
+PUSHINPAY_PRODUCTION_TOKEN=SEU_TOKEN_DE_PRODUCAO
+PIX_PRIVATE_ACCESS_CODE=UMA_SENHA_UNICA_DE_20_OU_MAIS_CARACTERES
+PIX_RECEIVER_NAME=NOME_REAL_DO_RECEBEDOR
+```
+
+O token não vai para o browser. Nunca coloque a chave real em arquivos ou commits do GitHub. Se uma chave foi publicada anteriormente, revogue-a antes de usar o ambiente de produção.
+
+O backend `api/pix.js` usa o endereço de produção `https://api.pushinpay.com.br/api`. O valor fica fixado no servidor em **100 centavos = R$ 1,00**.
+
+### Funcionalidades
+
+- `GET /api/pix`: informa se a integração está configurada, o valor e o nome do recebedor; não retorna segredos.
+- `POST /api/pix` com `action: "create"`: cria uma cobrança autorizada pelo código privado; devolve QR Code e PIX copia e cola.
+- `POST /api/pix` com `action: "status"`: consulta manualmente o pagamento, conferindo ID e valor no retorno do provedor. O frontend restringe consultas a intervalos de 60 segundos para evitar bloqueios.
+
+**Proteja também o acesso ao deploy pela Vercel**, quando disponível, para evitar exposição da área de teste. A senha do checkout é somente uma proteção adicional.
+
+## Deploy
 
 1. Importe o repositório `LilNomad01/consulta-mei-pix-teste` na Vercel.
-2. Configure **Root Directory**: `Consulta_MEI_GitHub_Pronto`.
-3. Selecione o framework **Other**.
-4. Publique o projeto. Nenhuma credencial de pagamento é necessária.
+2. Escolha **Root Directory**: `Consulta_MEI_GitHub_Pronto`.
+3. Framework: **Other**; Node.js 20 ou superior.
+4. Cadastre as variáveis secretas, publique e acesse a página inicial (`/`).
+5. Role até **Área técnica: integração PIX** para usar o checkout privado.
 
 ## Validação
 
-No diretório do projeto, execute:
+Execute na raiz do projeto:
 
 ```sh
 npm test
 ```
 
-Esse comando verifica a sintaxe de `api/cnpj.js` e `api/pix.js`.
-
-## Segurança
-
-Credenciais e arquivos `.env` não devem ser publicados no GitHub. O projeto não dispõe mais de integração bancária real.
+Os testes automatizados usam respostas simuladas de `fetch`. Eles validam a sintaxe e as verificações de segurança, mas **não comprovam que uma transação bancária real foi concluída**. Esse último teste exige token ativo e pagamento voluntário no aplicativo bancário.
 
 ## Aviso
 
-Este site não possui vínculo com o Governo Federal. Dados cadastrais de CNPJ não comprovam liberação de empréstimos, créditos ou saldos disponíveis. Não há cobrança para liberação de supostos créditos nesta demonstração.
+A plataforma não tem vínculo com o Governo Federal. Consultas cadastrais de CNPJ não comprovam crédito ou recebíveis disponíveis. Não pague taxas antecipadas para liberar supostos créditos.
