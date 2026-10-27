@@ -1,0 +1,8 @@
+# Nunca versionar credenciais nem dados pessoais locais
+.env
+.env.*
+!.env.example
+node_modules/
+.vercel/
+*.log
+.DS_Store
