@@ -622,26 +622,38 @@ body{background:#fff;color:var(--ink);font-size:16px;line-height:1.58;letter-spa
 }
 @media(max-width:380px){.next-step > #connectButton{font-size:12px;padding-inline:10px}}
 
-/* Tela Pix exclusiva para TESTE de navegação, sem pagamento real. */
-.pix-demo-dialog{width:min(470px,calc(100vw - 24px));max-width:470px;max-height:min(90dvh,850px);padding:0;border:1px solid #d7e2f1;border-radius:22px;overflow:auto;color:#203d63;background:#fff;box-shadow:0 30px 75px rgba(6,30,63,.30)}
-.pix-demo-dialog::backdrop{background:rgba(8,26,51,.78)}
-.pix-demo-wrap{position:relative;padding:28px 26px 24px;display:flex;flex-direction:column;align-items:stretch;gap:13px}
-.pix-demo-close{position:absolute;right:16px;top:15px;background:transparent;border:0;color:#1657ae;width:32px;height:32px;display:grid;place-items:center}
-.pix-demo-eyebrow{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;background:#eaf3ff;color:#2055a5;border:1px solid #cbdcf5;border-radius:999px;padding:7px 13px;font-size:11px;font-weight:800;letter-spacing:.065em;text-transform:uppercase;margin-right:45px}
-.pix-demo-dialog h2{font-size:24px;letter-spacing:-.04em;margin:4px 28px 0 0;color:#183b6b;line-height:1.2}
-.pix-demo-dialog .pix-demo-intro{font-size:13px;line-height:1.6;color:#536d8c;margin:0}
-.pix-demo-amount{padding:15px 16px;border:1px solid #dce8f6;background:#f6faff;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.pix-demo-amount span{font-size:12px;color:#607894;font-weight:650}.pix-demo-amount strong{font-size:25px;color:#174b99;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
-.pix-demo-qr{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;padding:10px;border:1px dashed #c7d7ed;background:#fff;border-radius:13px}
-.pix-demo-qr img{width:min(185px,56vw);height:min(185px,56vw);display:block;image-rendering:pixelated}
-.pix-demo-qr strong{font-size:11px;color:#a15a1c;letter-spacing:.08em}
-.pix-demo-code-label{font-size:12px;font-weight:750;color:#335271}
-.pix-demo-copy{padding:12px;border:1px solid #cbd9ea;border-radius:10px;color:#34506f;background:#f7fafe;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere;user-select:all}
-.pix-demo-action{background:#165bb8;color:white;border:0;border-radius:10px;font-size:14px;font-weight:750;padding:13px;min-height:47px;cursor:pointer}
-.pix-demo-action:hover{background:#104a95}.pix-demo-action:disabled{opacity:.55;cursor:wait}
-.pix-demo-footnote{font-size:12px;color:#714f1c;background:#fff6e6;border:1px solid #f1dab6;border-radius:10px;padding:11px 12px;line-height:1.55;margin:0}
-.pix-demo-error{font-size:12px;line-height:1.55;color:#a61b1b;margin:0}
-@media(max-width:420px){.pix-demo-wrap{padding:24px 17px 17px}.pix-demo-dialog h2{font-size:21px}.pix-demo-amount strong{font-size:22px}}
+
+/* Checkout voluntário e independente: nunca faz parte da consulta CNPJ. */
+.pix-independent{border-top:5px solid #e1eaf3;background:#f2f5f9;padding:38px 0 42px}
+.pix-independent-inner{max-width:750px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.pix-independent-title{margin:0 0 6px;font-size:20px;line-height:1.3;color:#223c59}
+.pix-independent p{font-size:12px;line-height:1.7;color:#56708b;margin:0;max-width:525px}
+.pix-independent button{border:1px solid #8ba0b9;border-radius:11px;background:#fff;color:#1c4a85;font-weight:800;padding:13px 17px;flex:0 0 auto}
+.pix-independent button:hover{background:#eef5fd}
+.pix-real-dialog{width:min(490px,calc(100vw - 24px));max-height:90dvh;overflow:auto;border:1px solid #d8e4f2;border-radius:21px;padding:0;color:#203a5e;box-shadow:0 27px 80px #09284f50}
+.pix-real-dialog::backdrop{background:#061b35cc}
+.pix-real-inner{padding:28px;position:relative}
+.pix-real-close{position:absolute;right:13px;top:11px;width:40px;height:40px;border:0;background:#f1f5fa;border-radius:50%;color:#26466f;font-size:25px}
+.pix-real-label{display:inline-block;font-size:11px;font-weight:850;color:#1d569c;background:#e9f2fe;border-radius:30px;padding:7px 11px;letter-spacing:.04em;margin-right:36px}
+.pix-real-dialog h2{font-size:23px;line-height:1.2;margin:16px 0 10px;color:#14375f}
+.pix-real-explain{font-size:13px;line-height:1.7;color:#536b85}
+.pix-real-disclosure{font-size:12px;line-height:1.65;background:#f6f8fb;border:1px solid #dbe4ed;padding:13px;border-radius:12px;margin:13px 0}
+.pix-real-amount{background:#f1f8f3;border:1px solid #cee6d5;border-radius:14px;padding:14px;margin:15px 0;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.pix-real-amount span{font-size:13px}.pix-real-amount strong{font-size:27px;color:#157350}
+.pix-real-dialog label.pix-field-label{display:block;margin:11px 0 5px;font-size:12px;font-weight:800}
+.pix-real-dialog input[type=password],.pix-real-dialog textarea{width:100%;border-radius:10px;border:1px solid #bccbdc;background:white;font:inherit;font-size:13px;color:#243d5d;padding:11px}
+.pix-real-dialog textarea{min-height:82px;resize:vertical;overflow-wrap:anywhere}
+.pix-real-checkbox{display:flex;gap:10px;align-items:flex-start;margin:13px 0;font-size:12px;line-height:1.55;color:#395674}
+.pix-real-checkbox input{margin:4px 0 0;accent-color:#13599c;flex:0 0 auto}
+.pix-real-button{display:block;width:100%;min-height:44px;border-radius:11px;padding:11px;background:#1459ab;border:0;color:white;font-weight:800;font-size:13px;margin-top:10px}
+.pix-real-button.secondary{background:#e9f2ff;color:#114d90;border:1px solid #c7dbf2}
+.pix-real-button:disabled{opacity:.45;cursor:not-allowed}
+.pix-real-qr{display:block;width:min(230px,65vw);height:auto;margin:18px auto}
+.pix-real-status{min-height:20px;font-size:13px;color:#27506c;line-height:1.6}
+.pix-real-paid{color:#176746;font-weight:800}
+.pix-real-small{font-size:11px;line-height:1.55;color:#647c94}
+@media(max-width:650px){.pix-independent-inner{flex-direction:column;align-items:flex-start}.pix-independent button{width:100%}.pix-real-inner{padding:21px 17px}.pix-real-dialog h2{font-size:20px}}
+
 </style>
 
 </head>
@@ -781,6 +793,15 @@ body{background:#fff;color:var(--ink);font-size:16px;line-height:1.58;letter-spa
     <section class="content-section" id="como-funciona"><div class="container"><div class="center-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> COMO FUNCIONA</span><h2>Um processo simples, com as informações certas.</h2><p>A consulta de MEI é somente o começo. A antecipação depende de vendas existentes e de uma proposta de uma instituição parceira.</p></div><div class="steps-grid"><article class="step-card"><span class="step-number">01</span><div class="step-icon"><svg class="icon"><use href="#i-search"/></svg></div><h3>Consulte o CNPJ</h3><p>Confira a situação cadastral e a opção pelo MEI, quando os dados estiverem disponíveis.</p></article><article class="step-card"><span class="step-number">02</span><div class="step-icon"><svg class="icon"><use href="#i-card"/></svg></div><h3>Confirme as vendas</h3><p>Autorize a consulta das agendas de recebíveis existentes, pelo canal do parceiro financeiro.</p></article><article class="step-card"><span class="step-number">03</span><div class="step-icon"><svg class="icon"><use href="#i-wallet"/></svg></div><h3>Analise a proposta</h3><p>Veja valores líquidos, descontos, taxas, prazos e condições antes de decidir.</p></article><article class="step-card"><span class="step-number">04</span><div class="step-icon"><svg class="icon"><use href="#i-check"/></svg></div><h3>Receba, se aprovado</h3><p>Após a contratação válida, a instituição pode realizar o pagamento pela modalidade acordada, incluindo Pix.</p></article></div></div></section>
     <section class="faq-section" id="duvidas"><div class="container faq-layout"><div class="faq-left"><span class="eyebrow"><span class="eyebrow-dot"></span> DÚVIDAS FREQUENTES</span><h2>Informação clara em cada etapa.</h2><p>Saiba o que é necessário para avaliar uma antecipação de recebíveis.</p><a class="plain-link" href="#consultar">Voltar para consulta <svg class="icon"><use href="#i-arrow"/></svg></a></div><div class="faq-list"><details><summary>Todo MEI ativo pode receber uma antecipação?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Não. A situação de MEI não é prova de vendas a receber. A disponibilidade depende da existência de recebíveis elegíveis, da política do parceiro financeiro e da contratação.</p></details><details><summary>Como funciona o recebimento por Pix?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>O Pix é um meio de transferência. Uma instituição financeira poderá utilizá-lo para pagar uma antecipação de recebíveis após validação, aprovação e contratação.</p></details><details><summary>Esta consulta é um serviço do Governo Federal?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Não. Consulta MEI é uma plataforma independente que usa fontes públicas para consultar dados cadastrais. Para serviços oficiais, utilize os canais da Receita Federal.</p></details></div></div></section>
     <section class="closing"><div class="container closing-inner"><div><span>PRIMEIRO PASSO</span><h2>Comece pelo seu CNPJ.</h2><p>Conheça seu cadastro antes de avaliar uma operação financeira.</p></div><a class="closing-button" href="#consultar">Consultar MEI <svg class="icon"><use href="#i-arrow"/></svg></a></div></section>
+    <section class="pix-independent" id="integracao-pix" aria-label="Ferramenta técnica de pagamento independente">
+      <div class="container pix-independent-inner">
+        <div>
+          <h2 class="pix-independent-title">Área técnica: integração PIX</h2>
+          <p>Teste privado e voluntário de pagamento, independente da consulta MEI. Não é taxa governamental, não libera crédito e não é necessário para consultar CNPJ.</p>
+        </div>
+        <button type="button" id="pixRealOpen">Abrir teste de PIX (R$ 1,00)</button>
+      </div>
+    </section>
   </main>
   <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><span class="mini-brand">Consulta <span>MEI</span></span><p>Plataforma independente de consulta cadastral e informações sobre antecipação de recebíveis. Não vinculada ao Governo Federal.</p></div><div><strong>Explorar</strong><a href="#consultar">Consultar CNPJ</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><strong>Informação</strong><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener noreferrer">Receita Federal ↗</a><a href="https://www.bcb.gov.br/meubc/faqs/s/golpes" target="_blank" rel="noopener noreferrer">Segurança financeira ↗</a><span>Operadora e parceiro a identificar antes de produção</span></div></div><div class="container footer-bottom"><span>© 2026 Consulta MEI · Ambiente de testes</span><span>O site não possui contratação nem cobrança habilitada.</span></div></footer>
 
@@ -802,23 +823,35 @@ body{background:#fff;color:var(--ink);font-size:16px;line-height:1.58;letter-spa
   </dialog>
 
 
-  <!-- TESTE: o QR representa uma string comum, nunca dados Pix EMV válidos. -->
-  <dialog id="pixDemoDialog" class="pix-demo-dialog" aria-labelledby="pixDemoTitle" aria-describedby="pixDemoIntro">
-    <div class="pix-demo-wrap">
-      <button type="button" class="pix-demo-close" id="pixDemoClose" aria-label="Fechar teste Pix"><svg class="icon"><use href="#i-close"/></svg></button>
-      <span class="pix-demo-eyebrow"><svg class="icon"><use href="#i-info"/></svg> Ambiente de demonstração</span>
-      <h2 id="pixDemoTitle">Prévia da tela Pix</h2>
-      <p id="pixDemoIntro" class="pix-demo-intro">Fluxo de teste da interface. Nenhuma cobrança ou crédito foi criado, aprovado ou liberado.</p>
-      <div class="pix-demo-amount"><span>Valor a pagar</span><strong>R$ 0,00</strong></div>
-      <div class="pix-demo-qr">
-        <img src="/assets/pix-qr-demonstrativo.png" alt="QR ilustrativo que não representa um Pix pagável" width="185" height="185" id="pixDemoQr">
-        <strong>QR DE TESTE — NÃO PAGÁVEL</strong>
+  <!-- Checkout real apenas para operador autorizado, separado do fluxo de consulta. -->
+  <dialog class="pix-real-dialog" id="pixRealDialog" aria-labelledby="pixRealTitle">
+    <div class="pix-real-inner">
+      <button class="pix-real-close" id="pixRealClose" type="button" aria-label="Fechar checkout">&times;</button>
+      <span class="pix-real-label">TESTE PRIVADO • PIX REAL</span>
+      <h2 id="pixRealTitle">Verificar integração PushinPay</h2>
+      <p class="pix-real-explain">Esta é uma transferência voluntária de teste, de valor real, destinada ao recebedor informado. Não há produto ou crédito liberado por este pagamento.</p>
+      <div class="pix-real-amount"><span>Valor fixo da cobrança</span><strong>R$ 1,00</strong></div>
+      <p class="pix-real-disclosure"><strong>Sem vínculo com o Governo Federal.</strong> Não é taxa, consulta paga ou condição para antecipação de recebíveis. O pagamento é processado pela PushinPay, prestadora de serviços de pagamento.</p>
+      <p class="pix-real-explain">Recebedor identificado: <strong id="pixRealMerchant">Verificando configuração…</strong></p>
+
+      <div id="pixRealBefore">
+        <label class="pix-field-label" for="pixRealAccess">Código de acesso privado do operador</label>
+        <input id="pixRealAccess" type="password" autocomplete="off" maxlength="256" placeholder="Código privado">
+        <label class="pix-real-checkbox"><input type="checkbox" id="pixRealConsent"> <span>Entendo que isso cria uma cobrança bancária <strong>real de R$ 1,00</strong>, independente da consulta MEI, e que não há produto ou crédito liberado.</span></label>
+        <button type="button" id="pixRealCreate" class="pix-real-button" disabled>Gerar cobrança PIX real de R$ 1,00</button>
       </div>
-      <label class="pix-demo-code-label" for="pixDemoCode">Código de exemplo</label>
-      <div id="pixDemoCode" class="pix-demo-copy" aria-live="polite" role="status">Carregando...</div>
-      <button id="pixDemoCopy" type="button" class="pix-demo-action" disabled>Copiar código de teste</button>
-      <p class="pix-demo-footnote">Não é um Pix válido. Não transfira dinheiro nem pague taxas para liberar crédito. Esta tela usa apenas dados de teste.</p>
-      <p id="pixDemoError" class="pix-demo-error" hidden role="alert"></p>
+
+      <div id="pixRealPayment" hidden>
+        <p class="pix-real-explain">Verifique o valor e o nome do recebedor no seu aplicativo bancário <strong>antes de pagar</strong>.</p>
+        <img id="pixRealQR" class="pix-real-qr" alt="QR Code de cobrança PIX real de R$ 1,00" hidden>
+        <p id="pixRealQRUnavailable" class="pix-real-small" hidden>Imagem indisponível. Use o código PIX copia e cola.</p>
+        <label class="pix-field-label" for="pixRealCode">PIX copia e cola</label>
+        <textarea id="pixRealCode" readonly></textarea>
+        <button type="button" id="pixRealCopy" class="pix-real-button secondary">Copiar código PIX</button>
+        <button type="button" id="pixRealCheck" class="pix-real-button">Já paguei — verificar status</button>
+        <p class="pix-real-small">A consulta de status deve respeitar o intervalo mínimo de 60 segundos recomendado pela PushinPay.</p>
+      </div>
+      <p id="pixRealMessage" class="pix-real-status" role="status" aria-live="polite"></p>
     </div>
   </dialog>
 
@@ -1038,7 +1071,7 @@ $('#contrastButton').addEventListener('click',() => {
   const enabled = document.body.classList.toggle('high-contrast');
   $('#contrastButton').setAttribute('aria-pressed',String(enabled));
 });
-$('#cookieInfoButton').addEventListener('click', () => openDialog('Privacidade e informações', 'Esta demonstração não possui cadastro ou pagamentos habilitados. O CNPJ digitado é enviado à BrasilAPI, diretamente ou por uma rota da própria aplicação. Não gravamos o número consultado neste protótipo. Antes da publicação, disponibilize política de privacidade, dados da operadora e base legal de tratamento.'));
+$('#cookieInfoButton').addEventListener('click', () => openDialog('Privacidade e informações', 'A consulta de CNPJ é gratuita. Há uma área de teste privado de PIX real, independente da consulta e sem relação com liberação de crédito. O CNPJ digitado é enviado à BrasilAPI, diretamente ou por uma rota da própria aplicação. Não gravamos o número consultado neste protótipo. Antes da publicação, disponibilize política de privacidade, dados da operadora e base legal de tratamento.'));
 const searchInput = $('#siteSearch');
 const searchableSections = [
   {words:['cnpj','consulta','consultar','mei','cadastro','empresa'],id:'consultar'},
@@ -1107,50 +1140,122 @@ $('#connectButton').addEventListener('click', () => {
   else announce('Saldo de teste: R$ 0,00. Nenhum crédito disponível ou aprovado.');
 });
 $('#exampleAmountClose').addEventListener('click', () => exampleAmountDialog.close());
-// "Entendi" valida apenas a transição visual para uma página Pix de testes.
-// Em produção, a API retorna dados de simulação e NUNCA uma cobrança real.
-const pixDemoDialog = $('#pixDemoDialog');
-const pixDemoCode = $('#pixDemoCode');
-const pixDemoCopy = $('#pixDemoCopy');
-const pixDemoError = $('#pixDemoError');
-const INERT_PIX_CODE = 'PIX_TESTE_NAO_PAGAVEL_NENHUMA_COBRANCA';
-function closePixDemo(){ if(pixDemoDialog.open) pixDemoDialog.close(); }
-$('#pixDemoClose').addEventListener('click',closePixDemo);
-pixDemoDialog.addEventListener('click',e=>{if(e.target === pixDemoDialog)closePixDemo();});
-$('#exampleAmountOk').addEventListener('click',async () => {
-  exampleAmountDialog.close();
-  pixDemoCode.textContent = 'Preparando demonstração...';
-  pixDemoCopy.disabled=true;
-  pixDemoError.hidden=true;
-  pixDemoError.textContent='';
-  if(typeof pixDemoDialog.showModal === 'function') pixDemoDialog.showModal();
-  else return announce('Pix de teste. Não há cobrança real.');
-  try{
-    // Para testar abrindo o HTML diretamente, o exemplo local também é inofensivo.
-    let data;
-    if(location.protocol === 'file:') data = {simulation:true,payable:false,amount_cents:0,code:INERT_PIX_CODE};
-    else {
-      const resp=await fetch('/api/pix',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'demo'})});
-      if(!resp.ok) throw new Error('API de simulação indisponível ('+resp.status+')');
-      data=await resp.json();
+// O botão Entendi apenas reconhece o aviso de saldo ilustrativo.
+// A cobrança real exige uma ação separada e confirmação explícita.
+$('#exampleAmountOk').addEventListener('click', () => exampleAmountDialog.close());
+const pixRealDialog = $('#pixRealDialog');
+let pixRealId = null;
+let pixRealLastCheck = 0;
+let pixRealEnabled = false;
+const pixRealMessage = message => { $('#pixRealMessage').textContent = message; };
+async function pixRealApi(action) {
+  const response = await fetch('/api/pix', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    cache:'no-store',
+    body:JSON.stringify({
+      action,
+      access_code:$('#pixRealAccess').value,
+      ...(action === 'status' ? { id:pixRealId } : {})
+    })
+  });
+  const data = await response.json().catch(() => ({}));
+  if(!response.ok) throw new Error(data.error || 'Não foi possível falar com o servidor.');
+  return data;
+}
+function pixRealEnableButton() {
+  $('#pixRealCreate').disabled =
+    !pixRealEnabled || !$('#pixRealConsent').checked || !$('#pixRealAccess').value;
+}
+$('#pixRealAccess').addEventListener('input',pixRealEnableButton);
+$('#pixRealConsent').addEventListener('change',pixRealEnableButton);
+$('#pixRealOpen').addEventListener('click',async () => {
+  pixRealId = null;
+  pixRealLastCheck = 0;
+  pixRealEnabled = false;
+  $('#pixRealBefore').hidden = false;
+  $('#pixRealPayment').hidden = true;
+  $('#pixRealAccess').value = '';
+  $('#pixRealConsent').checked = false;
+  $('#pixRealMerchant').textContent = 'Verificando configuração…';
+  pixRealEnableButton();
+  pixRealMessage('');
+  if(typeof pixRealDialog.showModal !== 'function') return announce('Este navegador não aceita a tela de pagamento.');
+  pixRealDialog.showModal();
+  try {
+    const response = await fetch('/api/pix', {headers:{'Accept':'application/json'},cache:'no-store'});
+    const data = await response.json().catch(() => ({}));
+    if(!response.ok || !data.enabled || data.amount_cents !== 100 || !data.merchant) {
+      throw new Error('Pagamento indisponível: configure as credenciais e o recebedor na Vercel.');
     }
-    // Não exibir dados que possam ser confundidos com um código de pagamento real.
-    if(data.simulation!==true || data.payable!==false || data.amount_cents!==0 || data.code!==INERT_PIX_CODE)throw new Error('Resposta da API não corresponde a uma simulação segura.');
-    pixDemoCode.textContent=data.code;
-    pixDemoCopy.disabled=false;
-  }catch(err){
-    pixDemoCode.textContent='Nenhum código gerado';
-    pixDemoError.hidden=false;
-    pixDemoError.textContent=err.message || 'Falha na simulação';
+    $('#pixRealMerchant').textContent = data.merchant;
+    pixRealEnabled = true;
+    pixRealEnableButton();
+  }catch(err) {
+    $('#pixRealMerchant').textContent = 'Não configurado';
+    pixRealMessage(err.message);
   }
 });
-pixDemoCopy.addEventListener('click',async()=>{
-  if(pixDemoCopy.disabled)return;
-  try{
-    await navigator.clipboard.writeText(INERT_PIX_CODE);
-    pixDemoCopy.textContent='Código de teste copiado';
-    setTimeout(()=>{pixDemoCopy.textContent='Copiar código de teste';},1600);
-  }catch(err){announce('Selecione e copie manualmente o código de teste.');}
+$('#pixRealClose').addEventListener('click', () => pixRealDialog.close());
+pixRealDialog.addEventListener('click', event => {
+  if(event.target === pixRealDialog) pixRealDialog.close();
+});
+$('#pixRealCreate').addEventListener('click',async () => {
+  if($('#pixRealCreate').disabled)return;
+  $('#pixRealCreate').disabled = true;
+  pixRealMessage('Solicitando cobrança de R$ 1,00 à PushinPay…');
+  try {
+    const data = await pixRealApi('create');
+    if(data.amount_cents !== 100 || !data.id || !data.code ||
+        data.merchant !== $('#pixRealMerchant').textContent) {
+      throw new Error('Cobrança devolvida não corresponde aos dados apresentados.');
+    }
+    pixRealId = data.id;
+    $('#pixRealCode').value = data.code;
+    const qr = $('#pixRealQR');
+    if(data.image) {
+      qr.src = data.image;
+      qr.hidden = false;
+      $('#pixRealQRUnavailable').hidden = true;
+    } else {
+      qr.hidden = true;
+      $('#pixRealQRUnavailable').hidden = false;
+    }
+    $('#pixRealBefore').hidden = true;
+    $('#pixRealPayment').hidden = false;
+    pixRealMessage('PIX criado. Confira o valor e o recebedor no banco antes de pagar.');
+  } catch(err) {
+    pixRealMessage(err.message);
+    pixRealEnableButton();
+  }
+});
+$('#pixRealCopy').addEventListener('click',async () => {
+  try {
+    await navigator.clipboard.writeText($('#pixRealCode').value);
+    pixRealMessage('Código PIX copiado.');
+  } catch {
+    $('#pixRealCode').focus();
+    $('#pixRealCode').select();
+    pixRealMessage('Selecione e copie o código manualmente.');
+  }
+});
+$('#pixRealCheck').addEventListener('click',async () => {
+  if(!pixRealId)return;
+  const wait = 60000 - (Date.now() - pixRealLastCheck);
+  if(pixRealLastCheck && wait > 0) {
+    pixRealMessage('Aguarde '+Math.ceil(wait/1000)+' segundos para consultar novamente.');
+    return;
+  }
+  pixRealLastCheck = Date.now();
+  $('#pixRealCheck').disabled = true;
+  pixRealMessage('Consultando confirmação na PushinPay…');
+  try {
+    const data = await pixRealApi('status');
+    pixRealMessage(data.paid ? 'Pagamento confirmado pela PushinPay.' :
+      'Pagamento ainda não confirmado. Status: '+(data.status||'desconhecido')+'.');
+  } catch(err) {
+    pixRealMessage(err.message);
+  } finally { $('#pixRealCheck').disabled = false; }
 });
 exampleAmountDialog.addEventListener('click', event => {
   if (event.target === exampleAmountDialog) exampleAmountDialog.close();
