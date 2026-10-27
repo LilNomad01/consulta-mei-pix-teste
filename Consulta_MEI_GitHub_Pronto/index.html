@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/assets/consulta-mei-logo.png" type="image/png">
+  <meta name="description" content="Consulta MEI: consulte dados públicos do CNPJ e conheça as etapas de antecipação de recebíveis. Plataforma independente, não governamental.">
+  <title>Consulta MEI | Consulte seu CNPJ e entenda a antecipação de recebíveis</title>
+  <style>
+:root{--blue:#1656b8;--blue-deep:#0d3e86;--blue-dark:#0e2c56;--ink:#1b3555;--text:#435a75;--muted:#8090a5;--line:#e1e8f1;--soft:#f5f8fc;--panel:#fff;--green:#197e60;--green-light:#eaf8f1;--shadow:0 18px 50px rgba(22,61,118,.085);--container:1160px}
+*{box-sizing:border-box}html{width:100%;scroll-behavior:smooth;overflow-x:clip;scroll-padding-top:176px}body{margin:0;min-width:0;overflow-x:clip;background:#fff;color:var(--ink);font:15px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}body.high-contrast{--blue:#004099;--ink:#0c203a;--text:#263b53;--line:#64738a;--soft:#f1f4fa}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #f0b82c;outline-offset:3px}svg.icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}.icons{position:absolute;width:0;height:0;pointer-events:none}.container{width:min(var(--container),calc(100% - 48px));margin-inline:auto;min-width:0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.utility-bar{border-bottom:1px solid #e6ebf3;background:#fff}.utility-content{height:38px;display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:11px;color:#6e829b;font-weight:550}.utility-actions{display:flex;align-items:center;gap:18px}.utility-help{color:#235a9a;font-weight:700}.utility-help span{margin-left:2px}.icon-button{border:0;background:transparent;padding:7px;display:inline-grid;place-items:center;color:var(--blue);border-radius:8px;transition:background .2s}.icon-button:hover{background:#eef5ff}.utility-icon{padding:5px}.utility-icon .icon{width:18px;height:18px}
+.site-header{position:relative;z-index:20;background:#fff;border-bottom:1px solid #e4ebf4;box-shadow:0 8px 18px rgba(39,62,100,.03)}.header-inner{min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;gap:12px;align-items:center;min-width:0}.brand-mark{width:43px;height:43px;background:#1656b8;border-radius:13px;display:grid;place-items:center;color:#fff;position:relative;flex:0 0 43px}.brand-mark .icon{width:25px;height:25px;stroke-width:1.7}.brand-mark b{position:absolute;background:#4ac2b2;border:3px solid #fff;width:12px;height:12px;border-radius:50%;bottom:-3px;right:-3px}.brand-text{line-height:1.12;min-width:0}.brand-text strong{display:block;color:#123e78;font-size:28px;font-weight:850;letter-spacing:-1.6px;white-space:nowrap}.brand-text strong span,.mini-brand span{color:#1688bc}.brand-text small{display:block;letter-spacing:.018em;color:#7a8ca2;font-size:10px;font-weight:650;margin-top:5px;white-space:nowrap}.header-buttons{display:flex;gap:12px;align-items:center}.header-action{height:47px;display:flex;gap:10px;align-items:center;justify-content:center;border-radius:26px;font-size:13px;font-weight:750;padding:0 20px;white-space:nowrap}.header-action svg{width:21px;height:21px}.outline-pill{color:var(--blue);border:1.5px solid var(--blue);background:white}.outline-pill:hover{background:#edf5ff}.primary-pill{border:1px solid var(--blue);background:var(--blue);color:#fff}.primary-pill:hover{background:var(--blue-deep)}.shortcut-wrap{position:relative}.shortcut-menu{position:absolute;right:0;top:calc(100% + 11px);width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 20px 44px rgba(15,47,83,.13);z-index:50}.shortcut-menu[hidden]{display:none}.shortcut-menu strong{display:block;font-size:12px;color:#708098;margin:5px 8px 9px}.shortcut-menu a{display:block;border-radius:8px;padding:8px 10px;font-weight:650;font-size:12px}.shortcut-menu a:hover{background:#eef5ff;color:var(--blue)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;min-height:56px;gap:20px}.nav-heading{display:flex;gap:12px;align-items:center;white-space:nowrap;color:#283f5b;font-weight:600;font-size:17px}.menu-button{display:none}.desktop-links{display:flex;gap:25px;align-items:center;margin-left:auto}.desktop-links a{font-size:12px;font-weight:700;color:#5f7290}.desktop-links a:hover{color:var(--blue)}.nav-tools{display:flex;gap:9px}.nav-tools .icon{height:21px;width:21px}.mobile-menu[hidden]{display:none}.mobile-menu{padding:6px 0 14px;border-top:1px solid var(--line)}.mobile-menu a{display:block;padding:10px 4px;font-size:14px;font-weight:650}.search-strip{padding-bottom:20px}.search-form{display:flex;align-items:center;gap:8px;width:100%;background:#f5f7fa;border:1px solid transparent;border-radius:12px;height:62px;padding:0 17px}.search-form:focus-within{border-color:#adcaee;background:#fff;box-shadow:0 0 0 3px #e2efff}.search-form input{flex:1;min-width:0;border:0;background:transparent;outline:none;color:var(--ink);font-size:16px}.search-form input::placeholder{color:#8a90a0;font-style:italic}.search-form .icon-button{padding:9px}.search-form svg.icon{width:23px;height:23px}.voice-status{position:fixed;right:25px;bottom:25px;z-index:80;background:#133765;color:#fff;box-shadow:0 18px 35px rgba(4,28,65,.27);padding:15px 20px;border-radius:12px;max-width:min(350px,calc(100vw - 34px));font-size:13px;font-weight:600}.voice-status[hidden]{display:none}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);z-index:100;background:#133765;color:#fff;border-radius:12px;max-width:calc(100vw - 28px);padding:13px 18px;box-shadow:0 16px 40px #15345b33;font-size:13px;line-height:1.55;text-align:center}.toast[hidden]{display:none}
+.hero{background:linear-gradient(115deg,#fafcff 0%,#f4f9ff 59%,#e9f2fd 100%);border-bottom:1px solid #e2ebf6;position:relative;isolation:isolate;overflow:hidden}.hero:after{content:"";position:absolute;width:600px;height:600px;right:-390px;top:90px;border:82px solid #dceaff8f;border-radius:50%;z-index:-1;pointer-events:none}.hero-grid{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:70px;align-items:center;padding-top:69px;padding-bottom:84px;position:relative}.hero-copy,.hero-visual{min-width:0}.eyebrow{display:inline-flex;align-items:center;gap:9px;letter-spacing:.09em;font-size:11px;color:#2360a2;font-weight:800}.eyebrow-dot{width:7px;height:7px;background:#1b79ce;display:inline-block;flex:0 0 auto;border-radius:50%}.hero h1{font-size:clamp(43px,5vw,67px);line-height:1.085;letter-spacing:-.063em;font-weight:850;max-width:630px;margin:18px 0 18px;color:#092d62}.hero h1 span{color:#1764c5}.intro{max-width:520px;margin:0;color:#5b7190;font-size:15px;line-height:1.84}.benefit-tags{display:flex;gap:13px;align-items:center;margin-top:23px;flex-wrap:wrap}.benefit-tags span{display:inline-flex;gap:7px;align-items:center;color:#526982;font-size:11px;font-weight:650}.benefit-tags svg{width:16px;height:16px;color:#168461}.consult-card{margin-top:29px;border:1px solid #dfebf7;background:white;box-shadow:0 15px 40px #23497316;border-radius:18px;max-width:550px;padding:26px 27px 18px}.card-heading{display:flex;align-items:center;gap:12px;margin-bottom:22px}.card-heading-icon{width:43px;height:43px;flex:0 0 43px;border-radius:11px;background:#eaf3ff;display:grid;place-items:center;color:var(--blue)}.card-heading strong{font-weight:800;font-size:16px;display:block;line-height:1.3}.card-heading span{font-size:11px;color:#8393a6;display:block;margin-top:2px}.consult-card label{display:block;font-size:12px;font-weight:750;color:#274b75;margin-bottom:9px}.input-wrap{display:flex;align-items:center;gap:10px;position:relative}.input-icon{position:absolute;left:16px;color:#6b89a8;width:19px!important;height:19px!important}.input-wrap input{width:100%;max-width:100%;min-width:0;height:57px;border:1.5px solid #d7e2f0;background:#fcfdff;border-radius:9px;padding:0 14px 0 47px;color:#183b6a;font-size:17px;font-weight:650;letter-spacing:.025em;outline:none;transition:all .18s}.input-wrap input:focus{border-color:#287be0;box-shadow:0 0 0 3px #e1eeff}.input-wrap input::placeholder{color:#a5b1c0;font-weight:500}.form-helper{margin:8px 0 0;color:#8697a9;font-size:10px;line-height:1.5}.form-error{font-size:11px;color:#aa3030;font-weight:650;margin:7px 0}.form-error[hidden]{display:none}.submit-button{width:100%;min-height:54px;display:flex;align-items:center;justify-content:center;gap:12px;margin-top:19px;border:none;border-radius:10px;background:#175dbb;color:#fff;font-weight:800;font-size:14px;box-shadow:0 10px 20px #195ebc27}.submit-button:hover:not(:disabled){background:#0e4da5}.submit-button:disabled{opacity:.65;cursor:wait}.submit-button svg{width:17px;height:17px}.card-footer{display:flex;justify-content:center;align-items:center;gap:7px;border-top:1px solid #edf1f6;margin-top:18px;padding-top:15px;color:#7890a8;font-size:10px;font-weight:550;text-align:center}.card-footer svg{width:14px;height:14px}.operator-note{display:flex;align-items:flex-start;gap:7px;margin-top:17px;max-width:540px;color:#74879a;font-size:10px;line-height:1.65}.operator-note .icon{width:14px;height:14px;margin-top:1px}
+.hero-visual{position:relative;max-width:490px;justify-self:end;width:100%}.visual-top{display:flex;align-items:center;gap:14px;margin-bottom:20px}.section-symbol{width:50px;height:50px;background:#dceafd;display:grid;place-items:center;border:1px solid #cde2fa;border-radius:14px;color:#246cc1}.section-symbol .icon{width:25px;height:25px}.visual-top span:not(.section-symbol){display:block;font-size:10px;color:#738caf;letter-spacing:.14em;font-weight:800}.visual-top h2{color:#123761;font-size:23px;margin:3px 0 0;line-height:1.2;letter-spacing:-.04em}.journey-card{border:1px solid #d6e5f5;border-radius:22px;background:white;padding:26px;box-shadow:0 24px 55px #285a9c1c;position:relative}.journey-head{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #e8eff8;padding-bottom:21px;font-size:13px;font-weight:800}.visual-pill{border-radius:25px;background:#edf7f2;color:#28835b;white-space:nowrap;font-size:10px;padding:8px 11px}.journey-item{display:flex;align-items:center;gap:13px;min-width:0;padding:23px 0}.journey-mark{width:45px;height:45px;background:#f0f5fb;color:#4275b0;border-radius:13px;display:grid;place-items:center;flex:0 0 45px}.journey-item.current .journey-mark{background:#e8f1ff;color:#1c6bc6}.journey-item>div:nth-child(2){flex:1;min-width:0}.journey-item strong{font-size:13px;line-height:1.4;font-weight:800;color:#193858;display:block}.journey-item small{display:block;color:#879aaf;line-height:1.45;font-size:10px;margin-top:5px}.journey-tag{font-size:10px;padding:6px 9px;border-radius:20px;background:#e6f7ef;color:#178160;font-weight:750}.journey-divider{height:1px;background:#edf1f6;margin-left:58px}.journey-chevron{transform:rotate(-90deg);width:17px!important;color:#95a6b8}.journey-caption{display:flex;gap:9px;background:#f1f7fe;border:1px solid #e2edfa;border-radius:11px;color:#5c7a9b;padding:14px;font-size:10px;font-weight:650;align-items:center;line-height:1.65}.journey-caption .icon{color:#2479c5;width:16px;height:16px}.visual-aside{position:absolute;right:-25px;bottom:-30px;box-shadow:0 14px 42px #1a417327;border:1px solid #dce8f5;background:white;border-radius:15px;padding:14px 18px;display:flex;align-items:center;gap:12px;transform:rotate(-2deg)}.visual-aside>.icon{width:35px;height:35px;padding:9px;background:#e5f5ed;color:#228e61;border-radius:11px}.visual-aside strong{font-size:11px;display:block}.visual-aside span{display:block;color:#8596aa;font-size:10px;margin-top:2px}
+.result-section{background:#f2f8ff;padding:48px 0;border-bottom:1px solid #e1ebf6}.result-section[hidden]{display:none}.result-layout{max-width:790px}.result-card{padding:30px;background:white;border:1px solid #dbe6f2;box-shadow:var(--shadow);border-radius:19px;outline:0}.result-head{display:flex;gap:13px;align-items:center}.result-emblem{width:48px;height:48px;border-radius:13px;color:#247ac5;background:#e7f2ff;display:grid;place-items:center;flex:0 0 auto}.result-emblem.success{background:#eaf8f1;color:#25865e}.result-emblem.warning{background:#fff5e6;color:#a36a16}.overline{font-size:10px;color:#8194ad;font-weight:800;letter-spacing:.13em;margin:0 0 4px}.result-head h2{font-size:23px;line-height:1.25;color:#163a67;margin:0;letter-spacing:-.03em}.result-message{margin:18px 0 0;color:#5e738d;font-size:13px;line-height:1.8}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px;margin:23px 0 0;border-radius:12px;background:#f6f9fe}.detail-grid[hidden]{display:none}.detail-grid div{min-width:0}.detail-grid small{font-size:10px;color:#778aa0;display:block;margin-bottom:5px}.detail-grid strong{overflow-wrap:anywhere;font-size:13px;line-height:1.45;display:block}.next-step{border:1px solid #d9e9fb;background:#f1f7ff;border-radius:13px;padding:18px;margin-top:20px}.next-step[hidden]{display:none}.next-step-head{display:flex;gap:12px}.next-step-head strong{font-size:14px;display:block}.next-step-head p{font-size:12px;color:#58718e;line-height:1.7;margin:7px 0 0}.step-icon{background:#e1efff;color:#2476c4;display:grid;place-items:center;border-radius:11px;width:42px;height:42px;flex:0 0 42px}.next-step>small{display:block;color:#8193a8;margin-top:10px;font-size:10px}.secondary-button{background:#155aba;color:#fff;border:0;border-radius:9px;padding:12px 16px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:12px;font-weight:750;margin-top:16px;min-height:43px}.secondary-button:hover{background:#104894}.secondary-button .icon{height:16px;width:16px}.result-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #edf1f6;padding-top:17px;margin-top:20px;color:#8393a5;font-size:10px}.inline-button{display:inline-flex;align-items:center;gap:7px;background:transparent;color:#155baa;border:0;font-weight:750;font-size:11px;padding:4px}.inline-button .icon{height:15px;width:15px}
+.trust-strip{background:white;border-bottom:1px solid #e7edf5}.trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:28px 0}.trust-item{display:flex;justify-content:center;gap:13px;align-items:center;min-width:0;padding:0 18px}.trust-item:not(:last-child){border-right:1px solid #e4ebf3}.trust-icon{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:12px;background:#edf5ff;color:var(--blue)}.trust-icon .icon{width:21px;height:21px}.trust-item strong{display:block;font-size:12px;line-height:1.5}.trust-item span{font-size:10px;color:#8c9cad;line-height:1.5;display:block;margin-top:3px}.content-section{padding:90px 0}.center-heading{text-align:center;max-width:700px;margin:auto}.center-heading h2,.faq-left h2{font-size:clamp(30px,3.3vw,40px);line-height:1.2;letter-spacing:-.05em;margin:15px 0;color:#12355e}.center-heading p,.faq-left p{font-size:13px;line-height:1.9;color:#788a9f;margin:0 auto;max-width:570px}.steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:43px}.step-card{border:1px solid #e1eaf3;border-radius:16px;padding:25px 20px;background:white;position:relative;min-width:0;box-shadow:0 8px 25px #23476b06}.step-number{position:absolute;top:18px;right:18px;font-size:19px;font-weight:850;color:#d5e3f4}.step-card .step-icon{margin-bottom:23px}.step-card h3{font-size:14px;margin:0 0 8px;color:#1c416d;letter-spacing:-.01em}.step-card p{color:#7a8ca3;font-size:11px;line-height:1.8;margin:0}.faq-section{padding:90px 0;background:#f5f8fc}.faq-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:80px}.faq-left h2{max-width:380px}.faq-left p{margin-left:0}.plain-link{display:inline-flex;align-items:center;gap:7px;color:var(--blue);font-size:12px;font-weight:800;margin-top:24px}.plain-link svg{width:16px;height:16px}.faq-list{background:white;border:1px solid #e2e9f2;border-radius:15px;padding:4px 23px}.faq-list details{border-bottom:1px solid #e8eef5}.faq-list details:last-child{border:0}.faq-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px;cursor:pointer;padding:19px 0;font-size:13px;line-height:1.55;font-weight:750;color:#2c4563}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary svg{width:17px;height:17px;color:#527eac;transition:transform .2s}.faq-list details[open] summary svg{transform:rotate(180deg)}.faq-list details p{font-size:12px;color:#788ba0;line-height:1.85;margin:0 0 19px}.closing{background:#143f77;color:white;padding:40px 0}.closing-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}.closing-inner span{font-size:10px;letter-spacing:.13em;color:#99c9ff;font-weight:800}.closing h2{margin:5px 0 5px;font-size:28px;letter-spacing:-.04em}.closing p{margin:0;color:#cbdbef;font-size:12px}.closing-button{display:inline-flex;align-items:center;gap:15px;background:white;color:#1254a8;border-radius:9px;padding:14px 20px;font-size:12px;font-weight:800;white-space:nowrap}.closing-button .icon{width:16px;height:16px}.closing-button:hover{background:#f1f6fd}
+.footer{background:#09294e;color:#deeafb}.footer-inner{display:grid;grid-template-columns:1.7fr .85fr 1.2fr;gap:70px;padding:58px 0 42px}.mini-brand{font-size:23px;font-weight:850;letter-spacing:-1.3px}.footer-brand p{font-size:11px;color:#a9bfd9;line-height:1.85;max-width:340px}.footer-inner>div:not(:first-child){display:flex;flex-direction:column;align-items:flex-start;gap:11px}.footer-inner strong{font-size:12px;margin-bottom:6px}.footer-inner a,.footer-inner div>span:not(.mini-brand){font-size:11px;color:#a9bfd9;line-height:1.8}.footer-inner a:hover{color:white}.footer-bottom{padding:17px 0;border-top:1px solid #244363;display:flex;justify-content:space-between;gap:20px;color:#91abc5;font-size:10px}.info-dialog{border:1px solid #e0ebf7;box-shadow:0 20px 80px #002a5740;border-radius:20px;max-width:min(420px,calc(100vw - 28px));padding:0;width:100%;color:var(--ink)}.info-dialog::backdrop{background:#07182e82}.dialog-inner{padding:29px;position:relative}.dialog-close{position:absolute;right:13px;top:13px}.dialog-illustration{background:#eaf4ff;color:var(--blue);width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px}.info-dialog h2{margin:0 0 8px;line-height:1.3;font-size:21px}.info-dialog p{color:#6e8199;font-size:12px;line-height:1.9}.info-dialog .secondary-button{width:100%;margin-top:22px}
+@media(max-width:1070px){.hero-grid{gap:35px}.visual-aside{right:0;bottom:-35px}.desktop-links{gap:15px}.steps-grid{gap:13px}.step-card{padding:22px 15px}}
+@media(max-width:820px){html{scroll-padding-top:100px}.container{width:min(var(--container),calc(100% - 38px))}.utility-bar{display:none}.header-inner{min-height:71px}.brand-mark{width:32px;height:32px;flex-basis:32px;border-radius:10px}.brand-mark .icon{height:18px;width:18px}.brand-text strong{font-size:20px;letter-spacing:-1px}.brand-text small{font-size:8px;margin-top:2px}.header-buttons{gap:8px}.header-action{height:39px;font-size:0;padding:0;width:40px;border-radius:20px}.header-action svg{height:19px;width:19px}.header-action span{display:none}.nav-row{min-height:64px}.nav-heading{font-size:16px}.menu-button{display:grid;margin-left:-5px}.desktop-links{display:none}.search-strip{padding-bottom:0}.search-form{display:none;min-height:58px;margin:4px 0 17px}.search-strip.open .search-form{display:flex}.search-strip .icon-button{padding:5px}.nav-tools{gap:13px}.hero-grid{grid-template-columns:1fr;padding-top:46px;padding-bottom:65px;gap:42px}.hero h1{font-size:clamp(36px,7vw,55px)}.intro{font-size:14px}.hero-visual{max-width:640px;justify-self:center}.visual-aside{right:14px}.trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.trust-item{padding:0 9px;gap:8px}.trust-icon{width:38px;height:38px;flex-basis:38px}.trust-item strong{font-size:10px}.trust-item span{font-size:9px}.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.faq-layout{grid-template-columns:1fr;gap:32px}.faq-left h2{max-width:none}.content-section,.faq-section{padding:64px 0}.footer-inner{grid-template-columns:1.2fr 1fr;gap:30px}.footer-inner>div:last-child{grid-column:span 2}}
+@media(max-width:520px){.container{width:calc(100% - 32px)}.header-inner{min-height:69px}.brand{gap:8px}.brand-text strong{font-size:19px}.brand-text small{font-size:8px}.nav-row{min-height:67px;gap:10px}.nav-heading{font-size:17px;gap:10px}.nav-tools{gap:7px}.nav-tools .icon{height:24px;width:24px}.hero-grid{padding:41px 0 50px;gap:43px}.eyebrow{font-size:9px;letter-spacing:.05em;gap:6px}.hero h1{font-size:40px;max-width:370px;line-height:1.11;margin:15px 0 15px}.intro{font-size:13px;line-height:1.8}.benefit-tags{gap:8px 12px;margin-top:16px}.benefit-tags span{font-size:10px}.consult-card{padding:20px 17px 16px;margin-top:23px;border-radius:15px}.card-heading{margin-bottom:17px}.card-heading strong{font-size:15px}.card-heading span{font-size:10px}.card-heading-icon{width:38px;height:38px;flex-basis:38px}.input-wrap input{font-size:16px;height:55px}.submit-button{margin-top:15px}.card-footer{font-size:9px}.operator-note{font-size:9px}.hero-visual{width:100%;max-width:100%}.visual-top{margin-bottom:13px}.visual-top h2{font-size:19px}.section-symbol{width:43px;height:43px}.journey-card{padding:16px;border-radius:17px}.journey-head{padding-bottom:14px;font-size:12px}.visual-pill{font-size:9px;padding:7px 9px}.journey-item{padding:18px 0;gap:10px}.journey-mark{width:38px;height:38px;flex-basis:38px}.journey-mark .icon{width:18px;height:18px}.journey-item strong{font-size:11px}.journey-item small{font-size:9px}.journey-tag{font-size:9px}.journey-divider{margin-left:48px}.journey-caption{font-size:9px;padding:12px}.visual-aside{position:relative;right:auto;bottom:auto;transform:none;margin-top:14px;padding:12px}.visual-aside>.icon{width:33px;height:33px}.result-section{padding:30px 0}.result-card{padding:19px;border-radius:15px}.result-head h2{font-size:19px}.detail-grid{grid-template-columns:1fr;gap:14px;padding:15px}.next-step{padding:15px}.result-bottom{flex-direction:column;align-items:flex-start}.trust-grid{grid-template-columns:1fr;gap:0;padding:5px 0}.trust-item{justify-content:flex-start;padding:15px 3px}.trust-item:not(:last-child){border-right:0;border-bottom:1px solid #edf1f6}.trust-icon{height:40px;width:40px;flex-basis:40px}.trust-item strong{font-size:12px}.trust-item span{font-size:10px}.center-heading h2,.faq-left h2{font-size:28px}.center-heading p,.faq-left p{font-size:12px}.steps-grid{gap:11px;margin-top:30px}.step-card{padding:18px 15px;min-height:197px}.step-number{font-size:15px}.step-card .step-icon{margin-bottom:15px}.step-card h3{font-size:12px}.step-card p{font-size:10px}.faq-list{padding:0 16px}.faq-list summary{font-size:12px}.closing{padding:30px 0}.closing-inner{align-items:stretch;flex-direction:column;gap:20px}.closing h2{font-size:24px}.closing-button{align-self:flex-start}.footer-inner{grid-template-columns:1fr 1fr;gap:30px 16px;padding:37px 0}.footer-brand{grid-column:span 2}.footer-inner>div:last-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:4px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* 2026 Header refinement — responsive institutional-inspired composition, original brand */
+@media(min-width:821px){.nav-tools{display:none}}
+:root{--header-blue:#1857ba}
+.utility-bar{background:#fff;border-top:2px solid #e8f2ff;border-bottom:0}
+.utility-content{height:49px;color:#647d9e;font-size:11px;gap:10px;border-bottom:1px solid #e7ebf0}
+.utility-actions{gap:16px}
+.utility-help{font-size:12px}
+.utility-label{letter-spacing:.012em}
+.utility-icon{width:38px;height:38px;color:var(--header-blue);border-radius:50%;}
+.utility-icon .icon{width:24px;height:24px;stroke-width:2.25}
+.utility-icon:hover{background:#edf4ff}
+.header-inner{min-height:98px;gap:26px}
+.brand{flex-shrink:0}
+.header-buttons{gap:15px}
+.header-action{height:56px;border-radius:100px;font-weight:750;font-size:18px;gap:11px;padding:0 25px;letter-spacing:-.015em}
+.header-action svg{width:26px;height:26px;stroke-width:2.4}
+.outline-pill{border:2px solid var(--header-blue);color:var(--header-blue)}
+.primary-pill{background:var(--header-blue);border:2px solid var(--header-blue)}
+.nav-row{min-height:64px}
+.nav-heading{font-size:19px;gap:13px}
+.nav-tools .icon{width:26px;height:26px;stroke-width:2.25}
+.search-strip{padding-top:2px;padding-bottom:26px}
+.search-form{height:66px;background:#f6f6f7;border-radius:11px;padding-inline:27px}
+.search-form input{font-size:20px;letter-spacing:-.02em}
+.search-form svg.icon{width:29px;height:29px;stroke-width:2.5}
+.search-form .icon-button{color:var(--header-blue)}
+@media(max-width:1100px){.header-action{font-size:15px;height:50px;padding:0 17px}.header-action svg{width:23px;height:23px}.desktop-links{gap:14px}.brand-text strong{font-size:25px}}
+@media(max-width:820px){
+  .utility-bar{display:block}
+  .utility-content{height:42px}
+  .utility-help{display:none}
+  .utility-actions{gap:8px}
+  .utility-icon{width:36px;height:36px}
+  .utility-icon .icon{width:23px;height:23px}
+  .site-header{box-shadow:0 7px 18px rgba(24,52,95,.035)}
+  .header-inner{min-height:86px;gap:10px}
+  .header-buttons{gap:8px}
+  .header-action{height:44px;width:auto;min-width:0;border-radius:28px;padding:0 14px;font-size:14px;gap:7px;letter-spacing:-.025em;white-space:nowrap}
+  .header-action span{display:inline}
+  .header-action svg{height:20px;width:20px}
+  .brand{gap:9px;border-right:1px solid #c9ced5;padding-right:12px}
+  .brand-mark{height:36px;width:36px;flex-basis:36px}
+  .brand-mark .icon{width:21px;height:21px}
+  .brand-text strong{font-size:19px}
+  .brand-text small{font-size:8px}
+  .nav-row{min-height:79px}
+  .nav-heading{font-size:19px;gap:10px}
+  .nav-tools{gap:12px}
+  .nav-tools .icon{height:27px;width:27px}
+  .search-strip{padding-bottom:0}
+  .search-form{height:60px;margin:0 0 16px;padding:0 14px}
+  .search-form input{font-size:16px}
+  .search-form svg.icon{width:23px;height:23px}
+}
+@media(max-width:600px){
+  .utility-content{height:42px}
+  .utility-label{font-size:10px}
+  .header-inner{min-height:83px}
+  .brand-mark{display:none}
+  .brand{padding-right:12px}
+  .brand-text strong{font-size:18px;letter-spacing:-.9px}
+  .brand-text small{font-size:8px;letter-spacing:-.02em;white-space:normal;max-width:104px}
+  .header-action{padding:0 14px;gap:7px;font-size:14px;height:43px}
+  .header-action svg{width:19px;height:19px}
+  .nav-heading{font-size:18px}
+  .nav-tools{gap:7px}
+}
+@media(max-width:390px){
+  .container{width:calc(100% - 28px)}
+  .header-inner{gap:6px;min-height:78px}
+  .brand{padding-right:8px;gap:0}
+  .brand-text strong{font-size:16px;letter-spacing:-.8px}
+  .brand-text small{font-size:7px;max-width:85px}
+  .header-buttons{gap:6px}
+  .header-action{height:42px;padding:0 10px;font-size:13px;gap:5px}
+  .header-action svg{width:18px;height:18px}
+  .nav-row{min-height:74px}
+  .nav-heading{font-size:17px;gap:7px}
+  .nav-tools{gap:3px}
+  .nav-tools .icon{width:25px;height:25px}
+}
+@media(max-width:340px){
+  .header-action{font-size:12px;padding:0 8px;gap:4px}
+  .brand-text strong{font-size:15px}
+  .brand-text small{font-size:7px}
+  .brand{padding-right:7px}
+  .nav-heading{font-size:16px}
+  .nav-tools .icon{width:24px;height:24px}
+}
+
+
+/* Personalização institucional da marca privada, sem reproduzir o selo gov.br */
+.utility-content{justify-content:space-between}.utility-home{font-weight:700;color:#3c6599}.brand-logo{display:grid;place-items:center;flex:0 0 47px;width:47px;height:47px}.brand-logo svg{display:block;width:100%;height:100%;filter:drop-shadow(0 3px 4px rgba(25,82,165,.11))}.brand-logo:focus{outline:0}
+.balance-card{background:linear-gradient(130deg,#103d75,#1559a9);color:white;border-radius:14px;padding:20px 22px;margin-bottom:22px;box-shadow:0 10px 30px rgba(13,64,135,.12)}.balance-eyebrow{display:flex;align-items:center;gap:7px;font-size:10px;color:#c8e8ff;letter-spacing:.1em;font-weight:800}.balance-eyebrow .icon{width:17px;height:17px}.balance-amount{font-size:clamp(18px,3vw,25px);font-weight:850;line-height:1.25;letter-spacing:-.03em;margin:11px 0 8px}.balance-hint{font-size:11px;color:#d6e8fa;line-height:1.6}.balance-progress{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.balance-progress span{display:inline-flex;align-items:center;border:1px solid #6392c1;border-radius:100px;padding:6px 11px;font-size:10px}.balance-progress .checked{background:#ecfff1;color:#126244;border-color:transparent;font-weight:750}.balance-progress .checked .icon{width:13px;height:13px;margin-right:4px}.balance-progress .pending{color:#e0effe}
+#consultButton:disabled{filter:saturate(.8)}.form-error{font-size:12px}.form-helper{font-size:11px}
+@media(max-width:820px){.utility-content{height:42px}.brand-logo{width:40px;height:40px;flex-basis:40px}.brand{gap:7px}}
+@media(max-width:600px){.brand-logo{display:grid;width:35px;height:35px;flex-basis:35px}.brand{gap:6px}.brand-text strong{font-size:17px}.brand-text small{font-size:7px;max-width:98px}}
+@media(max-width:390px){.brand-logo{width:30px;height:30px;flex-basis:30px}.brand{gap:5px}.brand-text strong{font-size:15px}.brand-text small{font-size:6.5px;max-width:95px}.header-action{font-size:12px;padding:0 9px}.header-buttons{gap:5px}}
+@media(max-width:340px){.brand-logo{width:26px;height:26px;flex-basis:26px}.brand-text strong{font-size:14px}.brand-text small{font-size:6px;max-width:78px}.header-action{padding:0 7px;font-size:11px}.header-action svg{width:17px;height:17px}}
+
+/* Consulta MEI — visual institucional original, inspiracao em boas praticas de portais de servicos.
+   Identidade de operadora privada, sem marcas ou componentes de autenticacao gov.br. */
+:root{--blue:#1558b3;--blue-deep:#0b4699;--blue-dark:#102f5b;--ink:#172b46;--text:#40546f;--muted:#75849b;--line:#dce4ef;--soft:#f5f7fb;--panel:#fff;--shadow:0 12px 34px rgba(28,55,96,.055);--container:1160px}
+html{scroll-padding-top:32px}
+body{background:#fff;color:var(--ink);font-size:16px;line-height:1.58;letter-spacing:-.005em}
+.container{width:min(var(--container),calc(100% - 56px))}
+.utility-bar{border-top:4px solid #124eac;background:#f8fafc;border-bottom:1px solid #e9edf3}
+.utility-content{height:42px;border:0;font-weight:600;color:#4f6682}
+.utility-label{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.utility-marker{width:7px;height:7px;border-radius:2px;background:#2d70bd;display:inline-block}
+.utility-private{font-weight:500;color:#6b7f95}
+.utility-help{color:#29588f}
+.utility-actions{gap:11px}
+.utility-icon{width:32px;height:32px}
+.utility-icon .icon{width:19px;height:19px}
+.site-header{box-shadow:none;border-bottom:1px solid #dfe6f0;background:white}
+.header-inner{min-height:102px;gap:18px}
+.brand-logo{width:54px;height:54px;flex-basis:54px}
+.brand-text strong{font-size:28px;letter-spacing:-.045em}
+.brand-text small{font-size:11px;line-height:1.45;color:#687d9a;letter-spacing:.01em;font-weight:550}
+.header-buttons{gap:12px}
+.header-action{height:51px;font-size:15px;border-radius:9px;padding:0 19px;box-shadow:none;letter-spacing:0}
+.header-action svg{width:20px;height:20px}
+.outline-pill{border:1.5px solid #1654b0;background:#fff}
+.outline-pill:hover{background:#eff5fd}
+.primary-pill{background:#1756b0;border:1px solid #1756b0}
+.primary-pill:hover{background:#0d4395}
+.shortcut-menu{box-shadow:0 14px 28px #0c2b4d1a}
+.nav-row{border-top:1px solid #e5eaf2;min-height:68px}
+.nav-heading{font-size:19px;font-weight:650;letter-spacing:-.025em}
+.desktop-links{gap:26px}
+.desktop-links a{font-size:13px;font-weight:650}
+.search-strip{padding-top:12px;padding-bottom:23px}
+.search-form{background:#f5f7fa;height:57px;border:1px solid #e1e7ee;border-radius:8px;padding-inline:18px}
+.search-form:focus-within{outline:2px solid #2273d0;outline-offset:2px}
+.search-form input{font-size:17px;color:#223b5a}
+.search-form input::placeholder{color:#738196;font-style:normal}
+.search-form svg.icon{width:23px;height:23px}
+.breadcrumb-bar{background:#fff;border-bottom:1px solid #e8edf4}
+.breadcrumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;min-height:51px;color:#61748d;font-size:12px}
+.breadcrumbs a{color:#1759b1;text-decoration:underline;text-underline-offset:3px}
+.breadcrumbs strong{color:#263e5e;font-weight:650}
+.hero{background:linear-gradient(180deg,#f8fafc 0%,#f4f8fe 100%);padding:48px 0 78px}
+.hero:before,.hero:after,.hero-copy:before,.hero-copy:after{display:none!important}
+.hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:65px;align-items:start}
+.eyebrow{color:#175ab2;font-size:11px;letter-spacing:.11em;font-weight:800}
+.eyebrow-dot{width:7px;height:7px;background:#1872d5}
+.hero-copy h1{font-size:clamp(35px,3.8vw,52px);line-height:1.16;letter-spacing:-.042em;max-width:640px;font-weight:800;margin:17px 0 18px}
+.hero-copy h1 span{color:#165bb7}
+.intro{max-width:590px;font-size:16px;line-height:1.72;color:#526882}
+.benefit-tags{display:flex;gap:12px 23px;flex-wrap:wrap;margin:26px 0 28px}
+.benefit-tags span{font-size:12px;color:#4b647c;font-weight:600}
+.benefit-tags .icon{color:#188563}
+.consult-card{border:1px solid #d8e4f1;border-top:4px solid #155ab9;background:white;box-shadow:0 14px 36px rgba(24,53,95,.07);border-radius:14px;padding:27px 29px 24px;margin-top:19px}
+.consult-progress{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #edf0f5;margin-bottom:22px;padding-bottom:14px;color:#697f98;font-weight:650;font-size:12px}
+.consult-step{font-size:10px;letter-spacing:.10em;color:#175ab8;background:#eaf3ff;border-radius:3px;padding:5px 7px;font-weight:800}
+.card-heading{gap:13px;margin-bottom:22px}
+.card-heading-icon{background:#eaf3fc;border-radius:10px;width:49px;height:49px;flex-basis:49px;color:#1154ac}
+.card-heading strong{font-size:19px;line-height:1.3;color:#183653;letter-spacing:-.02em}
+.card-heading span{font-size:12px;color:#6a7e97;margin-top:4px}
+#cnpjForm label{font-size:13px;color:#28476c;font-weight:750}
+.input-wrap{border:1.4px solid #cbd9e9;border-radius:8px;background:#fff;margin-top:8px}
+.input-wrap:focus-within{border-color:#1763c3;box-shadow:0 0 0 3px #1a64bd14}
+.input-wrap input{font-size:18px;font-weight:650;color:#16385f;height:58px}
+.input-wrap input::placeholder{font-weight:400;color:#97a7b9}
+.form-helper{font-size:11px;line-height:1.6;color:#72869e;margin:9px 0}
+.submit-button{border-radius:8px;min-height:56px;margin-top:20px;font-size:15px;box-shadow:none}
+.submit-button:hover{background:#0e458e}
+.card-footer{font-size:11px;color:#677f99;line-height:1.5;margin-top:20px;border-top:1px solid #edf0f5;padding-top:17px}
+.operator-note{font-size:11px;line-height:1.6;color:#718298;margin-top:17px;max-width:565px}
+.hero-visual{max-width:470px;margin-top:42px}
+.visual-top{margin-bottom:17px}
+.visual-top h2{font-size:23px;font-weight:750;letter-spacing:-.025em}
+.visual-top span:not(.section-symbol){font-size:11px}
+.section-symbol{background:#e9f1fc;border-radius:10px}
+.journey-card{border-radius:13px;border:1px solid #dae5f3;box-shadow:0 12px 34px #153c7014;padding:25px 26px 23px}
+.journey-head{font-size:14px;padding-bottom:18px}
+.visual-pill{background:#f2f6fc;color:#46668b;font-size:10px;border:1px solid #dce7f4}
+.journey-item{padding:22px 0;gap:13px}
+.journey-mark{border-radius:8px;width:43px;height:43px;flex-basis:43px}
+.journey-item strong{font-size:14px;font-weight:750}
+.journey-item small{font-size:12px;color:#768ca2}
+.journey-tag{background:#eaf5ef;color:#1d7754}
+.journey-caption{font-size:11px;border-radius:7px;background:#f5f8fc}
+.visual-aside{display:none}
+.trust-strip{border-bottom:1px solid #e1e8f3}
+.trust-grid{padding:25px 0}
+.trust-item strong{font-size:14px}
+.trust-item span{font-size:11px}
+.content-section{padding:83px 0}
+.center-heading h2,.faq-left h2{font-size:clamp(29px,3vw,40px)}
+.center-heading p,.faq-left p{font-size:14px}
+.step-card{border-radius:9px;box-shadow:none;border-top:3px solid #dce9f8}
+.step-card h3{font-size:16px}
+.step-card p{font-size:12px}
+.faq-section{background:#f7f9fc}
+.faq-list{border-radius:9px}
+.faq-list summary{font-size:14px}
+.faq-list details p{font-size:13px}
+.closing{background:#153d74}
+.footer{background:#0c294d}
+@media(max-width:1070px){.hero-grid{gap:30px}.brand-text strong{font-size:23px}.header-action{padding-inline:13px}}
+@media(max-width:820px){
+ .container{width:calc(100% - 38px)}
+ .utility-bar{display:block}.utility-content{height:40px}
+ .utility-label{font-size:10px}.utility-private{font-size:10px}
+ .header-inner{min-height:86px}
+ .brand-logo{width:38px;height:38px;flex-basis:38px}
+ .brand{border-right:1px solid #d5deea;padding-right:12px}
+ .brand-text strong{font-size:18px}
+ .brand-text small{font-size:9px}
+ .header-buttons{gap:9px}
+ .header-action{border-radius:8px;height:42px;font-size:13px;padding:0 11px;gap:6px}
+ .header-action svg{width:18px;height:18px}
+ .nav-row{min-height:62px}
+ .nav-heading{font-size:17px}
+ .nav-tools .icon{width:24px;height:24px}
+ .search-strip{padding:8px 0 15px}
+ .search-form{height:51px}
+ .search-form input{font-size:15px}
+ .breadcrumbs{min-height:42px;font-size:11px}
+ .hero{padding:37px 0 49px}
+ .hero-grid{grid-template-columns:1fr;gap:34px}
+ .hero-copy h1{max-width:690px;font-size:clamp(33px,6vw,48px)}
+ .intro{font-size:15px}
+ .hero-visual{width:100%;max-width:700px;justify-self:stretch;margin-top:0}
+ .visual-top h2{font-size:21px}
+ .consult-card{padding:24px}
+ .operator-note{font-size:11px}
+ .trust-grid{padding:10px 0}
+ .trust-item strong{font-size:13px}
+ .trust-item span{font-size:11px}
+ .content-section,.faq-section{padding:65px 0}
+}
+@media(max-width:600px){
+ .container{width:calc(100% - 32px)}
+ .utility-content{height:38px}.utility-actions{gap:7px}
+ .utility-label{font-size:10px}.utility-private{font-size:9px}
+ .utility-icon{width:31px;height:31px}
+ .header-inner{min-height:74px;gap:5px}
+ .brand{gap:7px;padding-right:10px}
+ .brand-logo{display:grid;width:34px;height:34px;flex-basis:34px}
+ .brand-text strong{font-size:17px;letter-spacing:-.04em}
+ .brand-text small{display:block;max-width:110px;font-size:8px;line-height:1.3;white-space:normal}
+ .header-buttons{gap:7px}
+ .header-action{height:40px;font-size:12px;padding:0 10px;gap:6px}
+ .header-action svg{width:17px;height:17px}
+ .nav-row{min-height:60px}
+ .nav-heading{font-size:15px;gap:8px}
+ .nav-tools{gap:4px}.nav-tools .icon{width:23px;height:23px}
+ .search-strip{padding:0 0 14px}
+ .search-form{height:50px;border-radius:7px}
+ .breadcrumb-bar{display:none}
+ .hero{padding:32px 0 45px}
+ .hero-copy h1{font-size:37px;line-height:1.16;margin:13px 0 14px}
+ .intro{font-size:14px;line-height:1.7}
+ .benefit-tags{gap:9px 16px;margin:17px 0 21px}
+ .benefit-tags span{font-size:11px}
+ .consult-card{padding:21px 17px 20px;margin-top:12px;border-radius:10px}
+ .consult-progress{font-size:11px;margin-bottom:17px}
+ .card-heading{margin-bottom:20px}.card-heading strong{font-size:18px}.card-heading span{font-size:11px}
+ .input-wrap input{font-size:17px;height:55px}
+ .form-helper,.card-footer{font-size:11px}
+ .submit-button{font-size:14px;min-height:53px}
+ .visual-top h2{font-size:21px}
+ .journey-card{padding:19px 17px;border-radius:10px}
+ .journey-head{font-size:13px}
+ .journey-item strong{font-size:13px}.journey-item small{font-size:11px}
+ .journey-caption{font-size:11px}
+ .trust-grid{grid-template-columns:1fr}
+ .trust-item{padding:15px 0;justify-content:flex-start}
+ .trust-item:not(:last-child){border-right:0;border-bottom:1px solid #e5ebf4}
+ .trust-item strong{font-size:13px}
+ .trust-item span{font-size:11px}
+ .center-heading h2,.faq-left h2{font-size:28px}
+ .step-card h3{font-size:14px}.step-card p{font-size:12px}
+ .faq-list summary{font-size:13px}
+ .footer-inner{gap:30px 18px}
+}
+@media(max-width:390px){
+ .container{width:calc(100% - 28px)}
+ .header-inner{gap:4px}
+ .brand{gap:5px;padding-right:7px}
+ .brand-logo{width:29px;height:29px;flex-basis:29px}
+ .brand-text strong{font-size:15px}
+ .brand-text small{font-size:7px;max-width:90px}
+ .header-buttons{gap:5px}
+ .header-action{height:38px;font-size:11px;padding:0 8px;gap:5px}
+ .header-action svg{width:16px;height:16px}
+ .nav-heading{font-size:14px}
+ .hero-copy h1{font-size:34px}
+ .utility-private{display:none}
+}
+@media(max-width:340px){
+ .brand-logo{width:26px;height:26px;flex-basis:26px}
+ .brand-text strong{font-size:14px}
+ .brand-text small{font-size:7px;max-width:76px}
+ .header-action{height:36px;font-size:10px;padding:0 7px}
+ .header-action svg{width:15px;height:15px}
+ .nav-heading{font-size:13px}
+ .hero-copy h1{font-size:32px}
+}
+
+/* Ajuste de legibilidade Consulta MEI: controles maiores e arredondados, identidade própria. */
+.header-buttons{gap:11px}
+.header-action{height:58px;border-radius:999px;font-size:17px;font-weight:750;letter-spacing:-.015em;padding:0 23px;gap:10px;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.header-action svg{width:23px;height:23px}
+.header-action:focus-visible{outline:3px solid #174fb2;outline-offset:3px}
+.header-action:active{transform:scale(.985)}
+@media(max-width:1070px){.header-action{height:52px;font-size:15px;padding:0 16px;gap:8px}}
+@media(max-width:820px){.header-action{height:50px;font-size:14px;padding:0 15px;gap:7px;border-radius:999px}.header-action svg{width:20px;height:20px}}
+@media(max-width:600px){.header-buttons{gap:6px}.header-action{height:48px;font-size:14px;padding:0 12px;gap:6px}.header-action svg{height:19px;width:19px}}
+@media(max-width:390px){.header-buttons{gap:5px}.header-action{height:46px;font-size:13px;padding:0 10px;gap:5px}.header-action svg{height:18px;width:18px}}
+@media(max-width:340px){.header-action{height:44px;font-size:12px;padding:0 7px;gap:4px}.header-action svg{height:16px;width:16px}}
+
+/* Cabeçalho mobile de serviços: três faixas, marca própria Consulta MEI. */
+.brand-more,.header-divider{display:none}
+@media(max-width:820px){
+ html{scroll-padding-top:18px}
+ .container{width:calc(100% - 32px)}
+ .utility-bar{display:block;background:#fff;border-top:3px solid #1656b8;border-bottom:0}
+ .utility-content{height:50px;min-height:50px;border-bottom:1px solid #e5ebf3;display:flex;align-items:center;justify-content:space-between;gap:9px}
+ .utility-label{display:inline-flex;align-items:center;gap:4px;min-width:0;font-size:10px;color:#285185;font-weight:700;letter-spacing:0;white-space:nowrap}
+ .utility-marker{width:7px;height:7px;flex:0 0 7px;background:#12a38b;border-radius:50%}
+ .utility-private{font-size:9px;color:#607387;font-weight:500}
+ .utility-actions{flex:0 0 auto;gap:8px}
+ .utility-help{display:none}
+ .utility-icon{width:35px;height:35px;padding:5px}
+ .utility-icon .icon{width:22px;height:22px;stroke-width:2}
+ .site-header{box-shadow:0 3px 7px rgba(11,41,76,.055);border-bottom:1px solid #e6ecf3}
+ .header-inner{height:96px;min-height:96px;display:flex;align-items:center;justify-content:flex-start;gap:9px;padding-top:12px;padding-bottom:13px;min-width:0}
+ .brand{gap:5px;border:0;padding:0;margin:0;flex:0 0 auto;min-width:0}
+ .brand-logo{width:28px;height:28px;flex-basis:28px}
+ .brand-text strong{font-size:14px;letter-spacing:-.045em;line-height:1.1}
+ .brand-text small{display:none}
+ .brand-more{display:grid;place-items:center;flex:0 0 19px;width:19px;height:37px;border:0;background:none;color:#1c5bb6;padding:5px 5px 5px 0;border-radius:5px;cursor:pointer}
+ .brand-more svg{width:7px;height:23px;fill:currentColor}
+ .brand-more:hover{background:#ecf4fe}
+ .header-divider{display:block;align-self:center;width:1px;height:45px;flex:0 0 1px;background:#d7e0ec;margin-right:2px}
+ .header-buttons{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex:1 1 0;min-width:0}
+ .shortcut-wrap{flex:1 1 0;min-width:0}
+ .header-action{width:100%;height:49px;border-radius:100px;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 9px;font-size:14px;font-weight:750;white-space:nowrap;letter-spacing:-.025em}
+ .header-action span{display:inline!important}
+ .header-action svg{width:18px;height:18px;stroke-width:2.5;flex:0 0 18px}
+ .outline-pill{border:2px solid #1957b4;color:#1957b4;background:white}
+ .primary-pill{width:auto;min-width:99px;flex:0 0 auto;background:#1556b5;border:2px solid #1556b5;color:white;padding-inline:12px}
+ .nav-row{height:75px;min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:6px;border-top:0}
+ .nav-heading{font-size:17px;line-height:1.25;font-weight:550;gap:8px;letter-spacing:-.025em;color:#293342;min-width:0}
+ .nav-heading>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .menu-button{display:grid;margin-left:-6px;flex:0 0 auto}
+ .menu-button .icon{height:27px;width:27px;stroke-width:2.6}
+ .nav-tools{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+ .nav-tools .icon{width:23px;height:23px;stroke-width:2.4}
+ .nav-tools .icon-button{width:34px;height:38px;padding:5px}
+ .desktop-links{display:none}
+ .mobile-menu{border-top:1px solid #e6edf5;padding-top:8px}
+ .search-strip{padding-top:0;padding-bottom:0}
+ .search-form{display:none}
+ .search-strip.open .search-form{display:flex;margin-bottom:16px;height:51px}
+}
+@media(max-width:390px){
+ .header-inner{gap:6px}
+ .brand-logo{width:25px;height:25px;flex-basis:25px}
+ .brand-text strong{font-size:13px}
+ .brand-more{width:14px;flex-basis:14px;padding-left:1px;padding-right:1px}
+ .header-divider{margin-right:0}
+ .header-buttons{gap:5px}
+ .header-action{height:45px;gap:4px;padding-inline:5px;font-size:12px}
+ .header-action svg{width:16px;height:16px;flex-basis:16px}
+ .primary-pill{min-width:89px;padding-inline:6px}
+ .nav-heading{font-size:15px;gap:5px}
+ .nav-tools{gap:5px}
+ .nav-tools .icon-button{width:32px}
+}
+@media(max-width:340px){
+ .utility-label{font-size:9px}
+ .utility-private{font-size:8px}
+ .utility-actions{gap:4px}
+ .header-inner{gap:4px}
+ .brand-logo{width:22px;height:22px;flex-basis:22px}
+ .brand-text strong{font-size:12px}
+ .header-action{font-size:11px;gap:3px;padding-inline:4px}
+ .header-action svg{width:15px;height:15px;flex-basis:15px}
+ .primary-pill{min-width:79px}
+ .nav-heading{font-size:14px}
+}
+@media(min-width:821px){.brand-more,.header-divider{display:none}}
+
+/* Cabeçalho institucional original para a plataforma financeira independente. */
+.brand-logo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(14,55,111,.10))}
+.utility-content{justify-content:flex-end}
+.utility-actions{margin-left:auto}
+@media(max-width:820px){
+  html{scroll-padding-top:18px}
+  .container{width:calc(100% - 38px)}
+  .utility-bar{border-top:1px solid #dee7f2}
+  .utility-content{height:58px;min-height:58px;border-bottom:1px solid #e5eaf1;justify-content:flex-end}
+  .utility-actions{gap:20px}
+  .utility-icon{height:36px;width:36px}
+  .utility-icon .icon{width:24px;height:24px}
+  .site-header{box-shadow:0 3px 10px rgba(25,48,82,.05);border-bottom:1px solid #e1e8f1}
+  .header-inner{height:110px;min-height:110px;gap:10px;padding-top:0;padding-bottom:0}
+  .brand{gap:6px;flex:0 0 auto;margin:0;padding:0;min-width:0}
+  .brand-logo{width:34px;height:34px;flex:0 0 34px}
+  .brand-text{min-width:0}
+  .brand-text strong{font-size:18px;letter-spacing:-.045em;line-height:1.1;white-space:nowrap}
+  .brand-text small{display:none}
+  .brand-more{width:14px;flex:0 0 14px;padding:0;min-height:38px}
+  .brand-more svg{width:6px;height:24px}
+  .header-divider{width:1px;flex:0 0 1px;height:53px;background:#d0dae8;margin:0 2px}
+  .header-buttons{display:flex;flex:1 1 auto;min-width:0;gap:11px;align-items:center}
+  .shortcut-wrap{flex:1 1 auto;min-width:0}
+  .header-action{height:57px;font-size:19px;border-radius:100px;gap:8px;font-weight:700;letter-spacing:-.02em;padding:0 12px}
+  .header-action svg{width:24px;height:24px;flex:0 0 24px}
+  .outline-pill{border:2px solid #1b58b5}
+  .primary-pill{min-width:149px;width:auto;flex:0 0 auto;padding:0 19px}
+  .nav-row{height:117px;min-height:117px;padding-bottom:0;align-items:center}
+  .nav-heading{font-size:22px;font-weight:500;gap:15px;color:#293444;white-space:nowrap}
+  .menu-button{width:32px;height:39px;padding:3px}
+  .menu-button .icon{width:28px;height:28px;stroke-width:2.65}
+  .nav-tools{gap:17px}
+  .nav-tools .icon-button{height:42px;width:36px;padding:5px}
+  .nav-tools .icon{width:27px;height:27px;stroke-width:2.45}
+  .search-strip{padding-bottom:0}
+  .search-form{display:none}
+  .search-strip.open .search-form{display:flex;height:56px;margin-bottom:13px}
+}
+@media(max-width:600px){
+  .container{width:calc(100% - 28px)}
+  .utility-content{height:47px;min-height:47px}
+  .utility-actions{gap:10px}
+  .header-inner{height:86px;min-height:86px;gap:6px}
+  .brand{gap:4px}
+  .brand-logo{height:29px;width:29px;flex:0 0 29px}
+  .brand-text strong{font-size:13px}
+  .brand-more{width:12px;flex:0 0 12px}
+  .header-divider{height:42px;margin:0 1px}
+  .header-buttons{gap:6px}
+  .header-action{height:45px;gap:5px;font-size:13px;padding:0 7px}
+  .header-action svg{width:18px;height:18px;flex:0 0 18px}
+  .primary-pill{min-width:89px;padding:0 9px}
+  .nav-row{height:80px;min-height:80px}
+  .nav-heading{font-size:17px;gap:7px}
+  .menu-button{height:37px;width:29px;padding:2px}
+  .menu-button .icon{width:27px;height:27px}
+  .nav-tools{gap:5px}
+  .nav-tools .icon-button{width:31px;height:37px;padding:4px}
+  .nav-tools .icon{width:24px;height:24px}
+}
+@media(max-width:390px){
+  .header-inner{gap:4px}
+  .brand-text strong{font-size:12px}
+  .brand-logo{height:26px;width:26px;flex:0 0 26px}
+  .brand-more{flex-basis:11px;width:11px}
+  .header-buttons{gap:4px}
+  .header-action{font-size:12px;gap:4px;padding:0 5px}
+  .header-action svg{width:16px;height:16px;flex:0 0 16px}
+  .primary-pill{min-width:81px;padding:0 6px}
+  .nav-heading{font-size:15px}
+}
+@media(max-width:345px){
+  .container{width:calc(100% - 20px)}
+  .brand-text strong{font-size:11px}
+  .brand-logo{height:23px;width:23px;flex:0 0 23px}
+  .header-inner{gap:3px}
+  .header-action{font-size:11px;padding:0 4px;gap:3px}
+  .header-action svg{width:15px;height:15px;flex:0 0 15px}
+  .primary-pill{min-width:74px}
+  .nav-heading{font-size:14px}
+  .nav-tools{gap:3px}
+}
+
+
+/* Design institucional original: referências de proporção, não cópia de autenticação do gov.br. */
+@media (min-width: 821px){
+  .header-action svg.icon { stroke:none; }
+}
+@media (max-width: 820px){
+  .container{width:calc(100% - 36px)}
+  .utility-content{height:66px;min-height:66px}
+  .utility-actions{gap:12px}
+  .utility-icon{width:37px;height:37px;padding:4px}
+  .utility-icon .icon{width:28px;height:28px}
+  .site-header{border-bottom:1px solid #e5e9f0;box-shadow:0 3px 10px rgba(11,42,91,.035)}
+  .header-inner{height:104px;min-height:104px;gap:11px;padding-top:0;padding-bottom:0}
+  .brand{gap:5px;flex:0 0 auto}
+  .brand-logo{height:30px;width:30px;flex:0 0 30px}
+  .brand-text strong{font-size:14px;letter-spacing:-.06em}
+  .brand-text small{display:none}
+  .brand-more{width:15px;flex:0 0 15px;padding:0 2px}
+  .brand-more svg{width:7px;height:26px}
+  .header-divider{height:58px;margin:0 3px 0 2px;background:#cad6e6}
+  .header-buttons{flex:1 1 0;gap:12px;min-width:0}
+  .shortcut-wrap{flex:1 1 0;min-width:0}
+  .header-action{height:62px;border-radius:999px;gap:9px;padding:0 18px;letter-spacing:-.03em;font-size:20px;font-weight:710}
+  .header-action svg.icon{width:24px;height:24px;flex:0 0 24px;stroke:none}
+  .outline-pill{border:2px solid #1457b8;background:#fff;color:#1658b8}
+  .primary-pill{width:auto;flex:0 0 auto;min-width:160px;padding:0 22px}
+  .nav-row{height:108px;min-height:108px}
+  .nav-heading{font-weight:480;color:#30363f;font-size:23px;gap:15px}
+  .menu-button{width:34px;height:40px;padding:3px;margin-left:-5px}
+  .menu-button .icon{height:29px;width:29px}
+  .nav-tools{gap:17px}
+  .nav-tools .icon-button{width:38px;height:42px;padding:4px}
+  .nav-tools .icon{height:28px;width:28px}
+}
+@media(max-width:600px){
+  .utility-content{height:51px;min-height:51px}
+  .utility-actions{gap:9px}
+  .utility-icon{width:32px;height:32px}
+  .utility-icon .icon{height:23px;width:23px}
+  .container{width:calc(100% - 28px)}
+  .header-inner{height:86px;min-height:86px;gap:6px}
+  .brand{gap:4px}
+  .brand-logo{height:25px;width:25px;flex:0 0 25px}
+  .brand-text strong{font-size:12.7px}
+  .brand-more{width:12px;flex:0 0 12px}
+  .brand-more svg{width:6px;height:23px}
+  .header-divider{height:44px;margin:0 2px 0 1px}
+  .header-buttons{gap:7px}
+  .header-action{height:46px;font-size:14px;gap:5px;padding:0 8px}
+  .header-action svg.icon{width:19px;height:19px;flex:0 0 19px}
+  .primary-pill{min-width:95px;padding:0 12px}
+  .nav-row{height:80px;min-height:80px}
+  .nav-heading{font-size:17px;gap:8px}
+  .menu-button{height:36px;width:29px}
+  .menu-button .icon{height:25px;width:25px}
+  .nav-tools{gap:7px}
+  .nav-tools .icon-button{width:30px;height:37px}
+  .nav-tools .icon{height:24px;width:24px}
+}
+@media(max-width:390px){
+  .container{width:calc(100% - 24px)}
+  .header-inner{gap:4px}
+  .brand-logo{height:23px;width:23px;flex:0 0 23px}
+  .brand-text strong{font-size:11.6px}
+  .brand-more{width:11px;flex:0 0 11px}
+  .header-divider{margin:0 1px 0 0}
+  .header-buttons{gap:5px}
+  .header-action{height:43px;font-size:12.5px;gap:4px;padding:0 5px}
+  .header-action svg.icon{width:17px;height:17px;flex:0 0 17px}
+  .primary-pill{min-width:82px;padding:0 7px}
+  .nav-heading{font-size:16px}
+}
+@media(max-width:340px){
+  .container{width:calc(100% - 16px)}
+  .header-inner{gap:3px}
+  .brand-logo{width:20px;height:20px;flex:0 0 20px}
+  .brand-text strong{font-size:10.5px}
+  .header-action{font-size:11px;padding:0 3px}
+  .header-action svg.icon{height:15px;width:15px;flex:0 0 15px}
+  .primary-pill{min-width:73px;padding:0 3px}
+  .nav-heading{font-size:14px}
+}
+/* Acesso: somente área de cliente, não identificação governamental. */
+
+
+/* Cabeçalho com logo PNG isolada, sem wordmark/subtítulo */
+.brand-logo{width:56px;height:56px;flex:0 0 56px}
+.brand-logo img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:820px){.brand-logo{width:39px;height:39px;flex:0 0 39px}}
+@media(max-width:600px){.brand-logo{width:30px;height:30px;flex:0 0 30px}}
+@media(max-width:390px){.brand-logo{width:28px;height:28px;flex:0 0 28px}}
+@media(max-width:340px){.brand-logo{width:26px;height:26px;flex:0 0 26px}}
+
+/* Modal demonstrativo: explicitamente não afirma limite ou saldo real. */
+.example-amount-dialog{border:1px solid #d8e4f2;box-shadow:0 28px 90px rgba(8,33,71,.24);border-radius:24px;max-width:min(500px,calc(100vw - 24px));padding:0;width:100%;color:var(--ink);background:#fff}
+.example-amount-dialog::backdrop{background:rgba(7,24,49,.72)}
+.example-amount-content{padding:30px 28px 26px;position:relative}
+.example-amount-close{position:absolute;top:15px;right:15px;border:2px solid #e4b536;background:#fff;color:#1d56b1;width:76px;height:76px;border-radius:24px}
+.example-amount-close:hover{background:#f8fbff}
+.example-modal-label{display:inline-flex;gap:8px;align-items:center;background:#eef4ff;color:#1f4e9e;padding:10px 14px;border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.example-modal-label .icon{width:16px;height:16px}
+.example-amount-dialog h2{font-size:24px;letter-spacing:-.04em;line-height:1.22;color:#173a69;margin:20px 34px 12px 0}
+.example-modal-description{font-size:13px;line-height:1.82;color:#617894;margin:0 0 20px}
+.example-amount-panel{background:#f4f8fe;border:1px solid #d7e3f3;border-radius:18px;padding:22px 18px;margin-bottom:18px}
+.example-amount-caption,.example-amount-detail{display:block;font-size:11px;line-height:1.5;color:#56708f}
+.example-amount-caption{font-weight:800}
+.example-amount-panel strong{font-size:clamp(31px,7vw,44px);display:block;margin:8px 0 5px;color:#1853a6;letter-spacing:-.05em;line-height:1.15;font-variant-numeric:tabular-nums}
+.example-amount-warning{display:flex;gap:11px;padding:14px;border:1px solid #e2e9f4;border-radius:14px;background:#f8fafc;color:#5c7088;font-size:11px;line-height:1.68}
+.example-amount-warning .icon{width:20px;height:20px;flex:0 0 20px;margin-top:1px;color:#6d87a8}
+.example-amount-warning strong{display:block;color:#2b4668;margin-bottom:2px}
+.example-amount-ok{width:100%;margin-top:21px;min-height:50px;font-size:14px;border-radius:12px}
+@media(max-width:420px){.example-amount-content{padding:24px 18px 20px}.example-amount-close{width:64px;height:64px;border-radius:20px;top:14px;right:14px}.example-amount-dialog h2{font-size:21px}.example-amount-panel{padding:18px 16px}}
+
+/* CTA centralizado de forma responsiva no resultado cadastral */
+.next-step > #connectButton {
+  display:flex;
+  width:min(100%, 370px);
+  min-height:48px;
+  justify-content:center;
+  align-items:center;
+  margin:18px auto 0;
+  padding:12px 16px;
+  text-align:center;
+}
+@media(max-width:380px){.next-step > #connectButton{font-size:12px;padding-inline:10px}}
+
+/* Tela Pix exclusiva para TESTE de navegação, sem pagamento real. */
+.pix-demo-dialog{width:min(470px,calc(100vw - 24px));max-width:470px;max-height:min(90dvh,850px);padding:0;border:1px solid #d7e2f1;border-radius:22px;overflow:auto;color:#203d63;background:#fff;box-shadow:0 30px 75px rgba(6,30,63,.30)}
+.pix-demo-dialog::backdrop{background:rgba(8,26,51,.78)}
+.pix-demo-wrap{position:relative;padding:28px 26px 24px;display:flex;flex-direction:column;align-items:stretch;gap:13px}
+.pix-demo-close{position:absolute;right:16px;top:15px;background:transparent;border:0;color:#1657ae;width:32px;height:32px;display:grid;place-items:center}
+.pix-demo-eyebrow{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;background:#eaf3ff;color:#2055a5;border:1px solid #cbdcf5;border-radius:999px;padding:7px 13px;font-size:11px;font-weight:800;letter-spacing:.065em;text-transform:uppercase;margin-right:45px}
+.pix-demo-dialog h2{font-size:24px;letter-spacing:-.04em;margin:4px 28px 0 0;color:#183b6b;line-height:1.2}
+.pix-demo-dialog .pix-demo-intro{font-size:13px;line-height:1.6;color:#536d8c;margin:0}
+.pix-demo-amount{padding:15px 16px;border:1px solid #dce8f6;background:#f6faff;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pix-demo-amount span{font-size:12px;color:#607894;font-weight:650}.pix-demo-amount strong{font-size:25px;color:#174b99;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.pix-demo-qr{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;padding:10px;border:1px dashed #c7d7ed;background:#fff;border-radius:13px}
+.pix-demo-qr img{width:min(185px,56vw);height:min(185px,56vw);display:block;image-rendering:pixelated}
+.pix-demo-qr strong{font-size:11px;color:#a15a1c;letter-spacing:.08em}
+.pix-demo-code-label{font-size:12px;font-weight:750;color:#335271}
+.pix-demo-copy{padding:12px;border:1px solid #cbd9ea;border-radius:10px;color:#34506f;background:#f7fafe;font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere;user-select:all}
+.pix-demo-action{background:#165bb8;color:white;border:0;border-radius:10px;font-size:14px;font-weight:750;padding:13px;min-height:47px;cursor:pointer}
+.pix-demo-action:hover{background:#104a95}.pix-demo-action:disabled{opacity:.55;cursor:wait}
+.pix-demo-footnote{font-size:12px;color:#714f1c;background:#fff6e6;border:1px solid #f1dab6;border-radius:10px;padding:11px 12px;line-height:1.55;margin:0}
+.pix-demo-error{font-size:12px;line-height:1.55;color:#a61b1b;margin:0}
+@media(max-width:420px){.pix-demo-wrap{padding:24px 17px 17px}.pix-demo-dialog h2{font-size:21px}.pix-demo-amount strong{font-size:22px}}
+</style>
+
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><g fill="currentColor" stroke="none"><rect x="2" y="2" width="5.6" height="5.6" rx="1"/><rect x="9.2" y="2" width="5.6" height="5.6" rx="1"/><rect x="16.4" y="2" width="5.6" height="5.6" rx="1"/><rect x="2" y="9.2" width="5.6" height="5.6" rx="1"/><rect x="9.2" y="9.2" width="5.6" height="5.6" rx="1"/><rect x="16.4" y="9.2" width="5.6" height="5.6" rx="1"/><rect x="2" y="16.4" width="5.6" height="5.6" rx="1"/><rect x="9.2" y="16.4" width="5.6" height="5.6" rx="1"/><rect x="16.4" y="16.4" width="5.6" height="5.6" rx="1"/></g></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><g fill="currentColor" stroke="none"><circle cx="12" cy="7.2" r="4.15"/><path d="M3.1 20.2c0-4.65 3.96-7.58 8.9-7.58s8.9 2.93 8.9 7.58c0 .9-.66 1.6-1.56 1.6H4.66c-.9 0-1.56-.7-1.56-1.6z"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.4" cy="10.4" r="7" fill="none" stroke="currentColor" stroke-width="2.65"/><path d="m15.65 15.65 5.1 5.1" fill="none" stroke="currentColor" stroke-width="2.85" stroke-linecap="round"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.1" width="6" height="12.7" rx="3" fill="currentColor" stroke="none"/><path d="M5.9 11.5c0 3.9 2.56 6.5 6.1 6.5s6.1-2.6 6.1-6.5M12 18v3.1m-4.35 0h8.7" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.3 15.1A8.9 8.9 0 0 1 8.9 3.7a9 9 0 1 0 11.4 11.4Z"/></symbol>
+    <symbol id="i-cookie" viewBox="0 0 24 24"><path d="M19.8 10.1c-3.2.35-5.6-1.7-5.3-5.05C11.6 5.3 9.7 3.1 10 1.8 5 2.5 1.5 6.8 1.5 12.15c0 6.1 4.55 10.35 10.5 10.35 5.74 0 9.9-4.45 10.48-10.02a4.95 4.95 0 0 1-2.68-2.38Z" fill="currentColor" stroke="none"/><g fill="#fff" stroke="none"><circle cx="7.2" cy="9.2" r="1.05"/><circle cx="13.5" cy="16.6" r="1.05"/><circle cx="7.8" cy="16.25" r="1.05"/></g></symbol>
+    <symbol id="i-half" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.15" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.85a9.15 9.15 0 0 0 0 18.3Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.7 20 6v5.3c0 5-3.3 8.5-8 10-4.7-1.5-8-5-8-10V6l8-3.3Z"/><path d="m8.5 12 2.3 2.4 4.9-5.2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12 5 5L19.5 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="15" rx="3"/><path d="M2 10h20M6 15h5"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="19" rx="2"/><path d="M8 7h2m4 0h2M8 11h2m4 0h2M8 15h2m4 0h2M10 22v-4h4v4"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-9v.2"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 13v-2a9 9 0 0 1 18 0v2M3 13v5a2 2 0 0 0 2 2h3v-8H5a2 2 0 0 0-2 2M21 13v5a2 2 0 0 1-2 2h-3v-8h3a2 2 0 0 1 2 2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="12" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v3"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M3 9V6a3 3 0 0 1 3-3h12M17 15h4"/></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="m12 2 8 8-8 8-8-8 8-8Zm0 11 4.5 4.5L12 22l-4.5-4.5L12 13Z"/></symbol>
+  </svg>
+
+  <div class="utility-bar">
+    <div class="container utility-content">
+      
+      <div class="utility-actions">
+        <a href="#duvidas" class="utility-help">Central de ajuda <span aria-hidden="true">↗</span></a>
+        <button type="button" class="icon-button utility-icon" id="cookieInfoButton" aria-label="Informações sobre privacidade" title="Privacidade"><svg class="icon"><use href="#i-cookie"/></svg></button>
+        <button type="button" class="icon-button utility-icon" id="contrastButton" aria-label="Alternar contraste" title="Alternar contraste" aria-pressed="false"><svg class="icon"><use href="#i-half"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#topo" class="brand" aria-label="Consulta MEI, voltar ao início">
+        <span class="brand-logo" aria-hidden="true"><img src="/assets/consulta-mei-logo.png" width="56" height="56" alt="" decoding="async"></span>
+        
+      </a>
+      <button type="button" class="brand-more" id="brandMoreButton" aria-label="Abrir navegação de serviços" aria-expanded="false" aria-controls="mobileMenu"><svg viewBox="0 0 8 24" aria-hidden="true" focusable="false"><circle cx="4" cy="4" r="2.6"/><circle cx="4" cy="12" r="2.6"/><circle cx="4" cy="20" r="2.6"/></svg></button>
+      <div class="header-divider" aria-hidden="true"></div>
+      <div class="header-buttons">
+        <div class="shortcut-wrap">
+          <button class="outline-pill header-action" type="button" id="shortcutsButton" aria-controls="shortcutsMenu" aria-expanded="false"><svg class="icon"><use href="#i-grid"/></svg><span>Atalhos</span></button>
+          <div class="shortcut-menu" id="shortcutsMenu" hidden>
+            <strong>Acesso rápido</strong>
+            <a href="#consultar">Consultar CNPJ</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#duvidas">Tirar dúvidas</a>
+          </div>
+        </div>
+        <button type="button" class="primary-pill header-action" id="accountButton" aria-label="Área do cliente (em desenvolvimento)"><svg class="icon"><use href="#i-person"/></svg><span>Acessar</span></button>
+      </div>
+    </div>
+    <div class="nav-row container">
+      <div class="nav-heading"><button type="button" class="icon-button menu-button" id="menuToggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu"><svg class="icon"><use href="#i-menu"/></svg></button><span>Serviços do MEI</span></div>
+      <nav class="desktop-links" aria-label="Navegação principal"><a href="#consultar">Consultar CNPJ</a><a href="#como-funciona">Como funciona</a><a href="#vantagens">Vantagens</a><a href="#duvidas">Dúvidas</a></nav>
+      <div class="nav-tools"><button type="button" class="icon-button" id="mobileMicButton" aria-label="Fazer pesquisa por voz"><svg class="icon"><use href="#i-mic"/></svg></button><button type="button" class="icon-button" id="searchToggle" aria-controls="searchStrip" aria-expanded="false" aria-label="Abrir busca"><svg class="icon"><use href="#i-search"/></svg></button></div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu" hidden><a href="#consultar">Consultar CNPJ</a><a href="#como-funciona">Como funciona</a><a href="#vantagens">Vantagens</a><a href="#duvidas">Perguntas frequentes</a></div>
+    <div class="search-strip container" id="searchStrip">
+      <form class="search-form" id="searchForm" role="search"><label class="sr-only" for="siteSearch">Pesquisar conteúdo do site</label><input id="siteSearch" type="search" placeholder="O que você procura?" autocomplete="off"><button type="button" class="icon-button mic-search" id="micButton" title="Pesquisar por voz" aria-label="Pesquisar por voz"><svg class="icon"><use href="#i-mic"/></svg></button><button type="submit" class="icon-button" aria-label="Buscar"><svg class="icon"><use href="#i-search"/></svg></button></form>
+    </div>
+  </header>
+  <div class="voice-status" id="voiceStatus" role="status" aria-live="polite" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <main>
+    <div class="breadcrumb-bar"><div class="container breadcrumbs"><a href="#topo">Início</a><span aria-hidden="true">›</span><span>Serviços para MEI</span><span aria-hidden="true">›</span><strong>Consultar CNPJ</strong></div></div>
+    <section class="hero" id="consultar">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> SERVIÇOS FINANCEIROS PARA MEI</div>
+          <h1>Antecipação de recebíveis <span>começa com informação.</span></h1>
+          <p class="intro">Consulte os dados do seu MEI e entenda os próximos passos para verificar vendas a receber com uma instituição financeira parceira.</p>
+          <div class="benefit-tags"><span><svg class="icon"><use href="#i-check"/></svg> Consulta gratuita de CNPJ</span><span><svg class="icon"><use href="#i-shield"/></svg> Sem promessa de aprovação</span></div>
+          <div class="consult-card" id="consultCard">
+            <div class="consult-progress"><span class="consult-step">ETAPA 01 DE 02</span><span>Consulta de cadastro</span></div>
+            <div class="card-heading"><div class="card-heading-icon"><svg class="icon"><use href="#i-building"/></svg></div><div><strong>Consulte seu CNPJ</strong><span>Preencha o campo abaixo para identificar sua empresa</span></div></div>
+            <form id="cnpjForm" novalidate>
+              <label for="cnpjInput">CNPJ da empresa</label>
+              <div class="input-wrap"><svg class="icon input-icon"><use href="#i-search"/></svg><input id="cnpjInput" name="cnpj" type="text" inputmode="text" autocomplete="off" maxlength="18" placeholder="00.000.000/0000-00" aria-describedby="cnpjHelp" spellcheck="false" required></div>
+              <p class="form-helper" id="cnpjHelp">Consulta de dados cadastrais públicos. Aceita CNPJ numérico e alfanumérico.</p>
+              <p class="form-error" id="formError" role="alert" hidden></p>
+              <button class="submit-button" type="submit" id="consultButton"><span>Consultar CNPJ</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+            </form>
+            <div class="card-footer"><svg class="icon"><use href="#i-lock"/></svg> Esta consulta é gratuita. Não é necessário fazer nenhum pagamento.</div>
+          </div>
+          <div class="operator-note"><svg class="icon"><use href="#i-info"/></svg><span>Consulta MEI é uma plataforma independente, não vinculada ao Governo Federal. Consulte os canais oficiais para serviços governamentais.</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Representação ilustrativa das etapas da consulta">
+          <div class="visual-top"><span class="section-symbol"><svg class="icon"><use href="#i-card"/></svg></span><div><span>ORIENTAÇÕES AO MEI</span><h2>Entenda o processo</h2></div></div>
+          <div class="journey-card">
+            <div class="journey-head"><span>Etapas do atendimento</span><span class="visual-pill">Guia de serviço</span></div>
+            <div class="journey-item current"><div class="journey-mark"><svg class="icon"><use href="#i-building"/></svg></div><div><strong>1. Consultar CNPJ</strong><small>Identifique o cadastro do seu MEI</small></div><span class="journey-tag">Atual</span></div>
+            <div class="journey-divider"></div>
+            <div class="journey-item"><div class="journey-mark"><svg class="icon"><use href="#i-card"/></svg></div><div><strong>2. Verificar recebíveis</strong><small>Confirmar vendas a receber com o parceiro</small></div><svg class="icon journey-chevron"><use href="#i-chevron"/></svg></div>
+            <div class="journey-divider"></div>
+            <div class="journey-item"><div class="journey-mark"><svg class="icon"><use href="#i-pix"/></svg></div><div><strong>3. Proposta e pagamento</strong><small>Condições contratuais e Pix, se aprovado</small></div><svg class="icon journey-chevron"><use href="#i-chevron"/></svg></div>
+            <div class="journey-caption"><svg class="icon"><use href="#i-shield"/></svg> Nenhum valor é apresentado sem conferência dos recebíveis.</div>
+          </div>
+          <div class="visual-aside"><svg class="icon"><use href="#i-check"/></svg><div><strong>Tudo explicado antes da contratação</strong><span>Condições detalhadas e decisão consciente.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-section" id="resultado" aria-label="Resultado da consulta" hidden>
+      <div class="container result-layout"><div class="result-card" id="resultCard" tabindex="-1">
+        <div class="result-head"><div class="result-emblem" id="resultIcon"><svg class="icon"><use href="#i-building"/></svg></div><div><p class="overline" id="resultEyebrow">CONSULTA CADASTRAL</p><h2 id="resultTitle">Dados consultados</h2></div></div>
+        <p class="result-message" id="resultDescription"></p>
+        <div class="detail-grid" id="companyDetails" hidden>
+          <div><small>Razão social</small><strong id="companyName"></strong></div>
+          <div><small>Nome fantasia</small><strong id="companyFantasy"></strong></div>
+          <div><small>CNPJ</small><strong id="companyCnpj"></strong></div>
+          <div><small>Situação cadastral</small><strong id="companyStatus"></strong></div>
+          <div><small>Enquadramento MEI</small><strong id="companyMei"></strong></div>
+          <div><small>Município / UF</small><strong id="companyCity"></strong></div>
+          <div><small>Atividade principal</small><strong id="companyActivity"></strong></div>
+          <div><small>Início de atividade</small><strong id="companySince"></strong></div>
+        </div>
+        <div class="next-step" id="eligibleNextStep" hidden>
+           <div class="balance-card" aria-label="Situação da verificação financeira"><div class="balance-eyebrow"><svg class="icon"><use href="#i-shield"/></svg> CONSULTA FINANCEIRA</div><div class="balance-amount">Aguardando verificação</div><div class="balance-hint">O CNPJ identifica a empresa, mas não informa vendas futuras disponíveis. Nenhum valor foi aprovado.</div><div class="balance-progress"><span class="checked"><svg class="icon"><use href="#i-check"/></svg> Cadastro consultado</span></div></div>
+           <div class="next-step-head"><span class="step-icon"><svg class="icon"><use href="#i-card"/></svg></span><div><strong>Próximo passo: consultar vendas a receber</strong><p>A operadora financeira precisará confirmar, com sua autorização, quais recebíveis existem e podem ser antecipados.</p></div></div>
+           <button type="button" class="secondary-button" id="connectButton" aria-haspopup="dialog" aria-controls="exampleAmountDialog">Conferir valor disponível <svg class="icon"><use href="#i-arrow"/></svg></button><small>A consulta é gratuita. Não faça pagamentos antecipados para liberar suposto crédito. O valor exibido a seguir é apenas ilustrativo.</small>
+         </div>
+        <div class="result-bottom"><span>Fonte cadastral: bases públicas. Nenhum saldo financeiro é consultado.</span><button type="button" class="inline-button" id="newConsultation">Consultar outro CNPJ <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </div></div>
+    </section>
+
+    <section class="trust-strip" id="vantagens"><div class="container trust-grid"><div class="trust-item"><div class="trust-icon"><svg class="icon"><use href="#i-shield"/></svg></div><div><strong>Consulta transparente</strong><span>Informações e limites claros.</span></div></div><div class="trust-item"><div class="trust-icon"><svg class="icon"><use href="#i-clock"/></svg></div><div><strong>Processo digital</strong><span>Informações em poucos passos.</span></div></div><div class="trust-item"><div class="trust-icon"><svg class="icon"><use href="#i-wallet"/></svg></div><div><strong>Custos detalhados</strong><span>Antes de qualquer contratação.</span></div></div></div></section>
+
+    <section class="content-section" id="como-funciona"><div class="container"><div class="center-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> COMO FUNCIONA</span><h2>Um processo simples, com as informações certas.</h2><p>A consulta de MEI é somente o começo. A antecipação depende de vendas existentes e de uma proposta de uma instituição parceira.</p></div><div class="steps-grid"><article class="step-card"><span class="step-number">01</span><div class="step-icon"><svg class="icon"><use href="#i-search"/></svg></div><h3>Consulte o CNPJ</h3><p>Confira a situação cadastral e a opção pelo MEI, quando os dados estiverem disponíveis.</p></article><article class="step-card"><span class="step-number">02</span><div class="step-icon"><svg class="icon"><use href="#i-card"/></svg></div><h3>Confirme as vendas</h3><p>Autorize a consulta das agendas de recebíveis existentes, pelo canal do parceiro financeiro.</p></article><article class="step-card"><span class="step-number">03</span><div class="step-icon"><svg class="icon"><use href="#i-wallet"/></svg></div><h3>Analise a proposta</h3><p>Veja valores líquidos, descontos, taxas, prazos e condições antes de decidir.</p></article><article class="step-card"><span class="step-number">04</span><div class="step-icon"><svg class="icon"><use href="#i-check"/></svg></div><h3>Receba, se aprovado</h3><p>Após a contratação válida, a instituição pode realizar o pagamento pela modalidade acordada, incluindo Pix.</p></article></div></div></section>
+    <section class="faq-section" id="duvidas"><div class="container faq-layout"><div class="faq-left"><span class="eyebrow"><span class="eyebrow-dot"></span> DÚVIDAS FREQUENTES</span><h2>Informação clara em cada etapa.</h2><p>Saiba o que é necessário para avaliar uma antecipação de recebíveis.</p><a class="plain-link" href="#consultar">Voltar para consulta <svg class="icon"><use href="#i-arrow"/></svg></a></div><div class="faq-list"><details><summary>Todo MEI ativo pode receber uma antecipação?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Não. A situação de MEI não é prova de vendas a receber. A disponibilidade depende da existência de recebíveis elegíveis, da política do parceiro financeiro e da contratação.</p></details><details><summary>Como funciona o recebimento por Pix?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>O Pix é um meio de transferência. Uma instituição financeira poderá utilizá-lo para pagar uma antecipação de recebíveis após validação, aprovação e contratação.</p></details><details><summary>Esta consulta é um serviço do Governo Federal?<svg class="icon"><use href="#i-chevron"/></svg></summary><p>Não. Consulta MEI é uma plataforma independente que usa fontes públicas para consultar dados cadastrais. Para serviços oficiais, utilize os canais da Receita Federal.</p></details></div></div></section>
+    <section class="closing"><div class="container closing-inner"><div><span>PRIMEIRO PASSO</span><h2>Comece pelo seu CNPJ.</h2><p>Conheça seu cadastro antes de avaliar uma operação financeira.</p></div><a class="closing-button" href="#consultar">Consultar MEI <svg class="icon"><use href="#i-arrow"/></svg></a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div class="footer-brand"><span class="mini-brand">Consulta <span>MEI</span></span><p>Plataforma independente de consulta cadastral e informações sobre antecipação de recebíveis. Não vinculada ao Governo Federal.</p></div><div><strong>Explorar</strong><a href="#consultar">Consultar CNPJ</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><strong>Informação</strong><a href="https://www.gov.br/receitafederal/pt-br" target="_blank" rel="noopener noreferrer">Receita Federal ↗</a><a href="https://www.bcb.gov.br/meubc/faqs/s/golpes" target="_blank" rel="noopener noreferrer">Segurança financeira ↗</a><span>Operadora e parceiro a identificar antes de produção</span></div></div><div class="container footer-bottom"><span>© 2026 Consulta MEI · Ambiente de testes</span><span>O site não possui contratação nem cobrança habilitada.</span></div></footer>
+
+  <!-- DEMONSTRAÇÃO: este valor não é originado de nenhuma API financeira. -->
+  <dialog id="exampleAmountDialog" class="example-amount-dialog" aria-labelledby="exampleAmountTitle" aria-describedby="exampleAmountDescription">
+    <div class="example-amount-content">
+      <button type="button" class="icon-button example-amount-close" id="exampleAmountClose" aria-label="Fechar demonstração"><svg class="icon"><use href="#i-close"/></svg></button>
+      <div class="example-modal-label"><svg class="icon"><use href="#i-info"/></svg> SIMULAÇÃO ILUSTRATIVA</div>
+      <h2 id="exampleAmountTitle">Consulta financeira de teste</h2>
+      <p id="exampleAmountDescription" class="example-modal-description">Esta interface mostra um saldo de teste zerado. A consulta de CNPJ não realiza análise de crédito nem confirma recebíveis disponíveis.</p>
+      <div class="example-amount-panel">
+        <span class="example-amount-caption">Saldo demonstrativo — sem valor disponível</span>
+        <strong>R$ 0,00</strong>
+        <span class="example-amount-detail">Valor de teste • nenhum crédito aprovado</span>
+      </div>
+      <div class="example-amount-warning"><svg class="icon"><use href="#i-shield"/></svg><span><strong>Não é uma aprovação ou oferta de crédito.</strong> Para conferir um valor real, é necessária integração com a instituição financeira e confirmação dos recebíveis com autorização do titular.</span></div>
+      <button type="button" class="secondary-button example-amount-ok" id="exampleAmountOk">Entendi</button>
+    </div>
+  </dialog>
+
+
+  <!-- TESTE: o QR representa uma string comum, nunca dados Pix EMV válidos. -->
+  <dialog id="pixDemoDialog" class="pix-demo-dialog" aria-labelledby="pixDemoTitle" aria-describedby="pixDemoIntro">
+    <div class="pix-demo-wrap">
+      <button type="button" class="pix-demo-close" id="pixDemoClose" aria-label="Fechar teste Pix"><svg class="icon"><use href="#i-close"/></svg></button>
+      <span class="pix-demo-eyebrow"><svg class="icon"><use href="#i-info"/></svg> Ambiente de demonstração</span>
+      <h2 id="pixDemoTitle">Prévia da tela Pix</h2>
+      <p id="pixDemoIntro" class="pix-demo-intro">Fluxo de teste da interface. Nenhuma cobrança ou crédito foi criado, aprovado ou liberado.</p>
+      <div class="pix-demo-amount"><span>Valor a pagar</span><strong>R$ 0,00</strong></div>
+      <div class="pix-demo-qr">
+        <img src="/assets/pix-qr-demonstrativo.png" alt="QR ilustrativo que não representa um Pix pagável" width="185" height="185" id="pixDemoQr">
+        <strong>QR DE TESTE — NÃO PAGÁVEL</strong>
+      </div>
+      <label class="pix-demo-code-label" for="pixDemoCode">Código de exemplo</label>
+      <div id="pixDemoCode" class="pix-demo-copy" aria-live="polite" role="status">Carregando...</div>
+      <button id="pixDemoCopy" type="button" class="pix-demo-action" disabled>Copiar código de teste</button>
+      <p class="pix-demo-footnote">Não é um Pix válido. Não transfira dinheiro nem pague taxas para liberar crédito. Esta tela usa apenas dados de teste.</p>
+      <p id="pixDemoError" class="pix-demo-error" hidden role="alert"></p>
+    </div>
+  </dialog>
+
+  <dialog id="infoDialog" class="info-dialog" aria-labelledby="modalTitle"><div class="dialog-inner"><button type="button" id="closeDialog" class="icon-button dialog-close" aria-label="Fechar"><svg class="icon"><use href="#i-close"/></svg></button><div class="dialog-illustration"><svg class="icon"><use href="#i-info"/></svg></div><h2 id="modalTitle">Disponível após a integração</h2><p id="modalText">Esta funcionalidade estará disponível após a conexão com o parceiro financeiro, implementação de cadastro seguro e validação das condições da operação.</p><button type="button" class="secondary-button" id="dialogOk">Entendi</button></div></dialog>
+  <script>
+'use strict';
+
+/**
+ * Consulta MEI — protótipo de consulta pública cadastral.
+ * Nenhuma informação é persistida por este código. Uma consulta de CNPJ
+ * é transmitida à BrasilAPI por proxy ou diretamente quando indisponível.
+ * A confirmação cadastral NÃO é uma análise de recebíveis nem de crédito.
+ */
+const $ = selector => document.querySelector(selector);
+const $$ = selector => [...document.querySelectorAll(selector)];
+const toast = $('#toast');
+let toastTimeout;
+function announce(message) {
+  toast.textContent = message;
+  toast.hidden = false;
+  window.clearTimeout(toastTimeout);
+  toastTimeout = window.setTimeout(() => { toast.hidden = true; }, 5400);
+}
+
+// Formato alfanumérico introduzido pela Receita Federal em julho de 2026:
+// o valor de cada caractere nas 12 posições-base é seu código ASCII - 48.
+// Os dois últimos caracteres seguem sendo dígitos numéricos.
+function normalizeCnpj(input) {
+  return input.toLocaleUpperCase('pt-BR').replace(/[^0-9A-Z]/g, '').slice(0, 14);
+}
+function formatCnpj(raw) {
+  const s = normalizeCnpj(raw);
+  const groups = [s.slice(0, 2), s.slice(2, 5), s.slice(5, 8), s.slice(8, 12), s.slice(12, 14)];
+  if (s.length <= 2) return groups[0];
+  if (s.length <= 5) return `${groups[0]}.${groups[1]}`;
+  if (s.length <= 8) return `${groups[0]}.${groups[1]}.${groups[2]}`;
+  if (s.length <= 12) return `${groups[0]}.${groups[1]}.${groups[2]}/${groups[3]}`;
+  return `${groups[0]}.${groups[1]}.${groups[2]}/${groups[3]}-${groups[4]}`;
+}
+function verifyCnpj(value) {
+  const cnpj = normalizeCnpj(value);
+  if (!/^[A-Z0-9]{12}[0-9]{2}$/.test(cnpj)) return false;
+  if (/^(.)\1{13}$/.test(cnpj)) return false;
+  const numbers = [...cnpj.slice(0, 12)].map(ch => ch.charCodeAt(0) - 48);
+  function digit(array, weights) {
+    const mod = array.reduce((sum, num, idx) => sum + num * weights[idx], 0) % 11;
+    return mod < 2 ? 0 : 11 - mod;
+  }
+  const first = digit(numbers, [5,4,3,2,9,8,7,6,5,4,3,2]);
+  const second = digit([...numbers,first], [6,5,4,3,2,9,8,7,6,5,4,3,2]);
+  return cnpj.slice(12) === String(first) + String(second);
+}
+
+const cnpjInput = $('#cnpjInput');
+const cnpjForm = $('#cnpjForm');
+const formError = $('#formError');
+const consultButton = $('#consultButton');
+const resultSection = $('#resultado');
+const resultCard = $('#resultCard');
+const companyDetails = $('#companyDetails');
+const nextStep = $('#eligibleNextStep');
+
+cnpjInput.addEventListener('input', () => {
+  cnpjInput.value = formatCnpj(cnpjInput.value);
+  formError.hidden = true;
+  cnpjInput.removeAttribute('aria-invalid');
+});
+function showFormError(message) {
+  formError.hidden = false;
+  formError.textContent = message;
+  cnpjInput.setAttribute('aria-invalid', 'true');
+}
+function showResult({kind, title, message, data, cnpj}) {
+  resultSection.hidden = false;
+  $('#resultTitle').textContent = title;
+  $('#resultDescription').textContent = message;
+  $('#resultEyebrow').textContent = kind === 'success' ? 'MEI IDENTIFICADO' : 'RESULTADO DA CONSULTA';
+  $('#resultIcon').className = `result-emblem ${kind === 'success' ? 'success' : kind === 'warning' ? 'warning' : ''}`;
+  companyDetails.hidden = !data;
+  nextStep.hidden = kind !== 'success';
+  if (data) {
+    $('#companyName').textContent = data.razao_social || 'Não informada';
+    $('#companyFantasy').textContent = data.nome_fantasia || 'Não informado';
+    $('#companyCity').textContent = [data.municipio, data.uf].filter(Boolean).join(' / ') || 'Não informado';
+    $('#companyActivity').textContent = data.cnae_fiscal_descricao || 'Não informada';
+    $('#companySince').textContent = data.data_inicio_atividade ? new Date(data.data_inicio_atividade + 'T12:00:00').toLocaleDateString('pt-BR') : 'Não informado';
+    $('#companyCnpj').textContent = formatCnpj(cnpj);
+    $('#companyStatus').textContent = Number(data.situacao_cadastral) === 2 ? 'Ativa' : ({1:'Nula',3:'Suspensa',4:'Inapta',8:'Baixada'}[Number(data.situacao_cadastral)] || 'Não informada');
+    $('#companyMei').textContent = data.opcao_pelo_mei === true ? 'Indicação positiva' : data.opcao_pelo_mei === false ? 'Não optante' : 'Não confirmado';
+  }
+  window.requestAnimationFrame(() => {
+    resultSection.scrollIntoView({behavior:'smooth',block:'start'});
+    window.setTimeout(() => resultCard.focus({preventScroll:true}), 350);
+  });
+}
+function setLoading(loading) {
+  consultButton.disabled = loading;
+  consultButton.querySelector('span').textContent = loading ? 'Consultando cadastro…' : 'Consultar CNPJ';
+  cnpjInput.readOnly = loading;
+  cnpjForm.setAttribute('aria-busy', String(loading));
+}
+async function consultCnpj(cnpj) {
+  // Em produção, /api/cnpj atua como proxy no mesmo domínio, evitando bloqueios CORS.
+  // Ao abrir HTML isolado, ou se não há rota na prévia, usa a API pública diretamente.
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 16000);
+  const urls = location.protocol === 'file:'
+    ? [`https://brasilapi.com.br/api/cnpj/v1/${encodeURIComponent(cnpj)}`]
+    : [`/api/cnpj?numero=${encodeURIComponent(cnpj)}`, `https://brasilapi.com.br/api/cnpj/v1/${encodeURIComponent(cnpj)}`];
+  let lastError;
+  try {
+    for (const [index, url] of urls.entries()) {
+      try {
+        const response = await fetch(url, { signal: controller.signal, headers: {Accept:'application/json'}, cache:'no-store' });
+        const contentType = response.headers.get('content-type') || '';
+        // Não confundir a página 404 do serviço de hospedagem com uma consulta sem cadastro.
+        if (!contentType.includes('json')) throw new Error('A rota de consulta não respondeu JSON');
+        if (response.status === 404) return {found:false};
+        if (!response.ok) {
+          // Se a rota própria respondeu erro de upstream, tentar diretamente é permitido.
+          throw new Error(`Falha na consulta (${response.status})`);
+        }
+        const data = await response.json();
+        if (!data || typeof data !== 'object' || !data.cnpj) throw new Error('Resposta de cadastro incompleta');
+        return {found:true, data};
+      } catch (error) {
+        lastError = error;
+        if (controller.signal.aborted || index === urls.length - 1) break;
+      }
+    }
+    throw lastError || new Error('Consulta indisponível');
+  } finally { window.clearTimeout(timeout); }
+}
+cnpjForm.addEventListener('submit', async event => {
+  event.preventDefault();
+  const cnpj = normalizeCnpj(cnpjInput.value);
+  if (!verifyCnpj(cnpj)) {
+    showFormError('Informe um CNPJ válido, incluindo os dígitos verificadores.');
+    cnpjInput.focus();
+    return;
+  }
+  resultSection.hidden = true;
+  setLoading(true);
+  try {
+    const result = await consultCnpj(cnpj);
+    if (!result.found) {
+      showResult({kind:'warning', title:'Cadastro não localizado', message:'Não encontramos o CNPJ na fonte consultada. Confira os dados e tente novamente; isso não significa que o cadastro seja inválido.', cnpj});
+      return;
+    }
+    const data = result.data;
+    const active = Number(data.situacao_cadastral) === 2;
+    const meiConfirmed = data.opcao_pelo_mei === true && !data.data_exclusao_do_mei;
+    if (active && meiConfirmed) {
+      showResult({kind:'success',title:'Seu cadastro de MEI foi identificado',message:'O CNPJ está ativo e a fonte consultada indica opção pelo MEI. Você pode conhecer a próxima etapa da antecipação de recebíveis. Isso não confirma crédito aprovado ou valores disponíveis.',data,cnpj});
+    } else if (!active) {
+      showResult({kind:'warning',title:'Cadastro encontrado, mas não está ativo',message:'A situação cadastral consultada não é ativa. Para entender seu enquadramento atual, utilize os canais oficiais da Receita Federal. Não foi realizada análise financeira.',data,cnpj});
+    } else if (data.opcao_pelo_mei === false || data.data_exclusao_do_mei) {
+      showResult({kind:'warning',title:'CNPJ encontrado, mas sem opção atual pelo MEI',message:'Os dados consultados não indicam opção vigente pelo MEI. Isso não determina a possibilidade de outras modalidades de antecipação de recebíveis.',data,cnpj});
+    } else {
+      showResult({kind:'warning',title:'Cadastro localizado; MEI não confirmado',message:'A fonte de consulta não informou se este CNPJ é optante pelo MEI. Não podemos confirmar o enquadramento nesta etapa. Confira o comprovante oficial do SIMEI.',data,cnpj});
+    }
+  } catch (error) {
+    showResult({kind:'warning',title:'Não foi possível concluir a consulta',message:'A consulta online não respondeu neste navegador ou no serviço de dados. Verifique sua conexão e tente novamente. Para confiabilidade maior, publique o projeto com a rota /api/cnpj incluída no ZIP. Nenhum valor foi verificado.',cnpj});
+  } finally {
+    setLoading(false);
+  }
+});
+$('#newConsultation').addEventListener('click', () => {
+  cnpjInput.value = '';
+  resultSection.hidden = true;
+  $('#consultCard').scrollIntoView({behavior:'smooth',block:'center'});
+  cnpjInput.focus({preventScroll:true});
+});
+
+// Menu e atalhos, inclusive fechamento ao clicar fora e navegação mobile.
+const shortcutsButton = $('#shortcutsButton');
+const shortcutsMenu = $('#shortcutsMenu');
+shortcutsButton.addEventListener('click', () => {
+  const open = shortcutsMenu.hidden;
+  shortcutsMenu.hidden = !open;
+  shortcutsButton.setAttribute('aria-expanded', String(open));
+});
+document.addEventListener('click', e => {
+  if (!shortcutsMenu.contains(e.target) && !shortcutsButton.contains(e.target)) {
+    shortcutsMenu.hidden = true;
+    shortcutsButton.setAttribute('aria-expanded','false');
+  }
+});
+$$('#shortcutsMenu a').forEach(link => link.addEventListener('click', () => {
+  shortcutsMenu.hidden = true;
+  shortcutsButton.setAttribute('aria-expanded','false');
+}));
+const menuToggle = $('#menuToggle');
+const mobileMenu = $('#mobileMenu');
+const brandMoreButton = $('#brandMoreButton');
+function updateNavigationState(open){
+  mobileMenu.hidden = !open;
+  menuToggle.setAttribute('aria-expanded',String(open));
+  menuToggle.setAttribute('aria-label',open ? 'Fechar menu' : 'Abrir menu');
+  brandMoreButton.setAttribute('aria-expanded',String(open));
+}
+brandMoreButton.addEventListener('click',()=>updateNavigationState(mobileMenu.hidden));
+menuToggle.addEventListener('click', () => {
+  const open = mobileMenu.hidden;
+  updateNavigationState(open);
+});
+$$('#mobileMenu a').forEach(a => a.addEventListener('click',() => {
+  updateNavigationState(false);
+}));
+$('#searchToggle').addEventListener('click',() => {
+  const search = $('#searchStrip');
+  const open = search.classList.toggle('open');
+  $('#searchToggle').setAttribute('aria-expanded',String(open));
+  if (open) $('#siteSearch').focus();
+});
+$('#contrastButton').addEventListener('click',() => {
+  const enabled = document.body.classList.toggle('high-contrast');
+  $('#contrastButton').setAttribute('aria-pressed',String(enabled));
+});
+$('#cookieInfoButton').addEventListener('click', () => openDialog('Privacidade e informações', 'Esta demonstração não possui cadastro ou pagamentos habilitados. O CNPJ digitado é enviado à BrasilAPI, diretamente ou por uma rota da própria aplicação. Não gravamos o número consultado neste protótipo. Antes da publicação, disponibilize política de privacidade, dados da operadora e base legal de tratamento.'));
+const searchInput = $('#siteSearch');
+const searchableSections = [
+  {words:['cnpj','consulta','consultar','mei','cadastro','empresa'],id:'consultar'},
+  {words:['etapas','como funciona','processo','adiantamento','antecipação','antecipar','pix','recebíveis','vendas'],id:'como-funciona'},
+  {words:['vantagens','segurança','transparência','benefícios'],id:'vantagens'},
+  {words:['dúvidas','perguntas','ajuda','taxa','cobrança','custo','problema'],id:'duvidas'}
+];
+function runSearch() {
+  const query = searchInput.value.toLocaleLowerCase('pt-BR').trim();
+  if (!query) {searchInput.focus();return;}
+  const match = searchableSections.find(item => item.words.some(word=>query.includes(word)));
+  if (match) {
+    $(`#${match.id}`).scrollIntoView({behavior:'smooth',block:'start'});
+    announce('Exibindo a seção encontrada para a sua pesquisa.');
+  } else announce('Não encontramos essa expressão. Tente: CNPJ, etapas, Pix, taxas ou dúvidas.');
+}
+$('#searchForm').addEventListener('submit',e=>{e.preventDefault();runSearch();});
+
+// Web Speech API exige suporte do navegador, HTTPS/localhost e permissão de microfone.
+let recognition;
+function useVoiceSearch() {
+  $('#searchStrip').classList.add('open');
+  $('#searchToggle').setAttribute('aria-expanded','true');
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    searchInput.focus();
+    announce('Seu navegador não oferece pesquisa por voz. Digite o que deseja encontrar.');
+    return;
+  }
+  try {
+    recognition?.abort();
+    recognition = new Recognition();
+    recognition.lang = 'pt-BR';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.onstart = () => { $('#voiceStatus').hidden=false;$('#voiceStatus').textContent='Microfone ativo: pode falar sua pesquisa.'; };
+    recognition.onresult = event => {
+      searchInput.value = event.results[0][0].transcript;
+      runSearch();
+    };
+    recognition.onerror = event => {
+      announce(event.error === 'not-allowed' ? 'Permissão para o microfone negada. Use a busca digitada.' : 'Não foi possível reconhecer a fala. Use a busca digitada.');
+    };
+    recognition.onend = () => {$('#voiceStatus').hidden=true;};
+    recognition.start();
+  } catch {
+    $('#voiceStatus').hidden = true;
+    searchInput.focus();
+    announce('Não foi possível iniciar o microfone. Use a busca digitada.');
+  }
+}
+$('#micButton').addEventListener('click',useVoiceSearch);
+$('#mobileMicButton').addEventListener('click',useVoiceSearch);
+
+const infoDialog = $('#infoDialog');
+function openDialog(title, message) {
+  $('#modalTitle').textContent = title;
+  $('#modalText').textContent = message;
+  if (typeof infoDialog.showModal === 'function') infoDialog.showModal();
+  else announce(message);
+}
+$('#accountButton').addEventListener('click',() => openDialog('Área do cliente ainda não disponível', 'O acesso do cliente depende de autenticação, cadastro seguro e integração com a instituição financeira. Nenhum login está habilitado nesta demonstração.'));
+const exampleAmountDialog = $('#exampleAmountDialog');
+$('#connectButton').addEventListener('click', () => {
+  if (typeof exampleAmountDialog.showModal === 'function') exampleAmountDialog.showModal();
+  else announce('Saldo de teste: R$ 0,00. Nenhum crédito disponível ou aprovado.');
+});
+$('#exampleAmountClose').addEventListener('click', () => exampleAmountDialog.close());
+// "Entendi" valida apenas a transição visual para uma página Pix de testes.
+// Em produção, a API retorna dados de simulação e NUNCA uma cobrança real.
+const pixDemoDialog = $('#pixDemoDialog');
+const pixDemoCode = $('#pixDemoCode');
+const pixDemoCopy = $('#pixDemoCopy');
+const pixDemoError = $('#pixDemoError');
+const INERT_PIX_CODE = 'PIX_TESTE_NAO_PAGAVEL_NENHUMA_COBRANCA';
+function closePixDemo(){ if(pixDemoDialog.open) pixDemoDialog.close(); }
+$('#pixDemoClose').addEventListener('click',closePixDemo);
+pixDemoDialog.addEventListener('click',e=>{if(e.target === pixDemoDialog)closePixDemo();});
+$('#exampleAmountOk').addEventListener('click',async () => {
+  exampleAmountDialog.close();
+  pixDemoCode.textContent = 'Preparando demonstração...';
+  pixDemoCopy.disabled=true;
+  pixDemoError.hidden=true;
+  pixDemoError.textContent='';
+  if(typeof pixDemoDialog.showModal === 'function') pixDemoDialog.showModal();
+  else return announce('Pix de teste. Não há cobrança real.');
+  try{
+    // Para testar abrindo o HTML diretamente, o exemplo local também é inofensivo.
+    let data;
+    if(location.protocol === 'file:') data = {simulation:true,payable:false,amount_cents:0,code:INERT_PIX_CODE};
+    else {
+      const resp=await fetch('/api/pix',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'demo'})});
+      if(!resp.ok) throw new Error('API de simulação indisponível ('+resp.status+')');
+      data=await resp.json();
+    }
+    // Não exibir dados que possam ser confundidos com um código de pagamento real.
+    if(data.simulation!==true || data.payable!==false || data.amount_cents!==0 || data.code!==INERT_PIX_CODE)throw new Error('Resposta da API não corresponde a uma simulação segura.');
+    pixDemoCode.textContent=data.code;
+    pixDemoCopy.disabled=false;
+  }catch(err){
+    pixDemoCode.textContent='Nenhum código gerado';
+    pixDemoError.hidden=false;
+    pixDemoError.textContent=err.message || 'Falha na simulação';
+  }
+});
+pixDemoCopy.addEventListener('click',async()=>{
+  if(pixDemoCopy.disabled)return;
+  try{
+    await navigator.clipboard.writeText(INERT_PIX_CODE);
+    pixDemoCopy.textContent='Código de teste copiado';
+    setTimeout(()=>{pixDemoCopy.textContent='Copiar código de teste';},1600);
+  }catch(err){announce('Selecione e copie manualmente o código de teste.');}
+});
+exampleAmountDialog.addEventListener('click', event => {
+  if (event.target === exampleAmountDialog) exampleAmountDialog.close();
+});
+$('#closeDialog').addEventListener('click',() => infoDialog.close());
+$('#dialogOk').addEventListener('click',() => infoDialog.close());
+infoDialog.addEventListener('click',e=>{if(e.target===infoDialog) infoDialog.close();});
+
+// Disponível para testes automatizados sem alterar o comportamento da interface.
+window.AnteciMEI = Object.freeze({ normalizeCnpj, formatCnpj, verifyCnpj });
+
+</script>
+</body>
+</html>
